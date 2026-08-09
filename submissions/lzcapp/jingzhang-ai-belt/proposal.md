@@ -157,7 +157,15 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 
 用地方案应依据国土空间调查、规划、用途管制分类等公开标准表达，形成完整、闭合、无缝的用地分区。建筑方案应区分保留、改造、更新、新建或待确认对象，明确建筑基底、功能、规模、风貌、屋顶、体量和高度控制的建议层级。若缺少现状建筑、权属、控规和工程条件，方案只能提出方法和待校准清单，不能编造拆改留结论。
 
-用地分类依据 [standard:MNR-LAND-USE-CLASSIFICATION-GUIDE]，建筑高度、体量、界面和风貌控制由 [depth:height_massing_character] 管理，拆改留方法由 [depth:retain_renovate_demolish] 管理。用地和建筑的主要证据是 [data:geometry/land_use.geojson#LU-001]、[data:geometry/buildings.geojson#BLDG-001] 和 [metric:building_footprint_area_sqm]。
+用地分类依据 [standard:MNR-LAND-USE-CLASSIFICATION-GUIDE]，建筑高度、体量、界面和风貌控制由 [depth:height_massing_character] 管理，拆改留方法由 [depth:retain_renovate_demolish] 管理。
+
+### 拆改留五闸门（方法而非结论）
+
+
+
+拆改留不编造结论，按五道闸门依次给出方法，任一道不过则降级为待确认：①现状核查（建筑基底/权属/现状测绘）；②合规与文保（控规、文保与风貌约束）；③公共利益与无障碍（是否服务弱势群体与连续无障碍）；④可逆性与复算（是否可回滚、面积是否可由几何复算）；⑤人工与社区确认（运营与社区共决）。闸门输出为"可深化清单"，非审定结论。
+
+用地和建筑的主要证据是 [data:geometry/land_use.geojson#LU-001]、[data:geometry/buildings.geojson#BLDG-001] 和 [metric:building_footprint_area_sqm]。
 
 建筑规模和强度指标必须与 `metrics.json` 和图层一致。若总建筑规模、容积率、建筑高度、建筑密度、绿地率、退线和建筑控制线缺少官方条件，应在指标体系中列为 unknown 或 pending_control，不得用固定数值制造精确感。A3 文册应给出更新项目清单和指标复核表，A0 展板应把关键空间结构和重点片区表达清楚，HTML 页面应提供指标和图层联动查看。
 
@@ -196,7 +204,23 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 
 上表为项目定位摘要；**完整 Feasibility 字段**（主体类型、近/中/长期阶段里程碑与交付物、成本类别与概念估算、成效阈值与目标值）见结构化数据 `visual/assets/renewal_projects.json`（JZ-01—JZ-06，含 `geometry_area_note_zh` 面积拓扑说明）。所有金额为概念阶段粗估区间，非概算/预算，落地须经投资测算核定，不与政府组织承诺混淆。
 
+### 成本五本账（金额 unknown）
+
+
+
+更新项目成本按五本账分别登记（人员 / 空间 / 设备 / 数据 / 公共价值），所有金额在概念阶段为 unknown，非概算/预算，落地须经投资测算核定；不与政府组织承诺混淆。五本账与 `metrics.json` 的 unknown 管控指标一致，防止被读成正式财务结论。
+
+
+
 分期应与 100 天征集设计周期形成区分：征集周期是提交成果的时间要求，实施分期是城市更新和项目建设的推进路径。方案应提出近期试点、中期更新和长期治理框架，并标明哪些内容可先以轻量设施、运营活动和服务平台启动，哪些必须等待正式控规、市政、交通和权属条件确认。对于年度活动体系、开发者社区运营、场景开放日、公共体验路线和国际传播机制，正文应说明运营对象、频率、责任边界、转化路径和风险，不得只写宣传口号。
+
+### 分期证据闸门
+
+
+
+每一期（近期试点 / 中期更新 / 长期治理）设证据闸门：进入下一期须满足前置证据——近期试点须有 baseline、试验样本与最小成功阈值；中期更新须有官方控规/权属/市政条件确认；长期治理须有公共价值复算与公众采纳台账。未达闸门则停留在当前期，不跨期承诺。
+
+
 
 ## 指标体系、面积复算与合规矩阵
 
@@ -207,6 +231,10 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 指标速览（均由提交几何在 EPSG:4548 投影面直接复算；精度受 provisional boundary 限制，待官方 redline 发布后整体重算）：用地面积 [metric:site_area_sqm] = 1141.3 万㎡；蓝绿空间面积 [metric:green_space_area_sqm] = 211.9 万㎡；公共空间面积 [metric:public_space_area_sqm] = 76.2 万㎡；建筑基底面积 [metric:building_footprint_area_sqm] = 310.6 万㎡；绿地率 [metric:green_ratio] = 18.6%；公共空间占比 [metric:public_space_ratio] = 6.7%；建筑密度 [metric:building_density] = 27.2%；重点区域数量 [metric:key_area_count] = 3 处；重点区域总面积 [metric:key_area_total_area_sqm] = 369.3 万㎡；分期总面积 [metric:phasing_area_sqm] = 1141.3 万㎡。上述空间指标可由 GeoJSON 直接复算，属于“可由提交几何复算”的第一类指标；容积率、建筑高度、总建筑面积在 `metrics.json` 中列为 unknown，待官方控规与任务书附件支撑。
 
 **面积拓扑差异说明（约 16.9 ㎡）**：由提交几何复算的 `site_area_sqm` = 11,412,825.386 ㎡ 与 `phasing_area_sqm` = 11,412,842.304 ㎡ 相差 **16.918 ㎡（约 16.9 ㎡）**，源于 provisional 边界分区时的浮点舍入与拓扑容差（两图层外边界未完全对齐），**不代表真实面积误差**；该差异已在 `metrics.json` 的 `geometry_topology_note` 与 `visual/assets/renewal_projects.json` 的 `geometry_area_note_zh` 中登记。所有由提交几何复算的面积与比例指标精度仍受 provisional boundary 限制，官方 redline 发布后须整体重算（[metric:site_area_sqm]、[metric:phasing_area_sqm]）。
+
+另见 `metrics.json` 的 `boundary_offset_note`：提交几何（PROV-SITE-001，约 11.4 km²）相对 OSM 实测京张铁路遗址公园约偏移 **412.5 m**（上游 issue #846）；所有面积与比例指标均为 provisional 边界内部复算值，不代表与真实遗址公园对齐后的尺度，不得作为正式控规或红线依据，官方 redline 发布后须整体重算并对齐。
+
+
 
 ![核心指标复算与证据链图](assets/figures/metrics-evidence.png)
 
@@ -250,6 +278,14 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 - 让历史铁路成为未来城市的试验场。 / Let the historic railway become a testbed for the future city.
 - 开源、可信、无障碍的 AI 公共生活。 / Open-source, trustworthy, accessible AI public life.
 
+**定稿国际传播句（international short sentence）**：A railway of shared intelligence—tested in public, translated with care, returned to the city.（一条共享智能的铁路——在公共中试验，以审慎转译，交还给城市。）
+
+
+
+**可逆组件叙事**：所有 AI 场景与空间干预以"可逆组件"为原则组织——任何试点都可经申诉/回滚退出，不固化不可逆的设施或权属变更；这与京张传承凭证的 `appeal_rollback` 字段及四阶段机制的"结束公开采纳/回滚"一致，体现对城市与公众的谦逊责任。
+
+
+
 视觉识别方向（概念稿，非最终设计）：以**线性光带 + 轨道断面**为母题，呼应"一带三核、蓝绿慢行复合环"；主色取智轨蓝绿与重点区暖红，几何化、不含任何受版权或商标保护的形象。方向稿以 SVG 纯几何表达，置于 `visual/assets/logo_direction.svg`（本地生成，未引用外部素材）。所有 logo、字体、图像、肖像与企业标识都须有清权来源后方可对外使用（命名与视觉方向亦见 [source:CULTURE]；agent 任务来源 [source:AGENT-TASKBOOK]）。
 
 ## 三区两翼与区域协同回路（agent.1）
@@ -292,6 +328,48 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 ## 用户画像、弱势群体与非数字替代（agent.3 / 公共利益）
 
 沿用 5 类核心画像（开源开发者、初创团队、头部企业访客、周边居民、高校师生），并补充 5 类弱势群体画像（老人、儿童、残障、照护者、低收入就业者）与非数字服务替代方案（详见 `visual/assets/persona_table.json`）：如线下服务台、纸质大字指南、盲文触觉地图、社区议事会、人工陪行等。公众参与通过社区议事会、双轨公示、活动分级与无障碍渠道保障；AI 仅辅助汇总，决策由人工与社区共同作出。机器生成画像不声称已做人工田野调查，正式实施前须补充真实用户调研与人工无障碍审查（画像与非数字替代 [source:PERSONA]）。
+
+### 公众参与四阶段机制（公共利益闭环）
+
+
+
+本方案把公众参与设计为可审计的四阶段闭环（结构化见 `visual/assets/persona_table.json` 的 `participation_stages`）：
+
+
+
+1. **进入前共定义**：社区议事会与双轨公示，与居民、残障组织、老年与儿童代表共同界定目标、边界、指标与可接受风险。
+
+2. **开放前走查**：节点开放前组织残障、老年与非智能机用户进行无障碍与可用走查，验证连续无障碍路径与等效非数字替代。
+
+3. **运行中反馈/申诉**：现场服务台与线上匿名反馈/申诉双通道，所有意见进入对抗式审查清单，人工复核后 72h 内以"采纳/部分采纳/不采纳"三态回应。
+
+4. **结束公开采纳/回滚**：活动或试点结束公开台账与采纳结果；未达阈值或引发风险的节点执行回滚，并说明复算前置条件。
+
+
+
+**连续无障碍路径**：以京张遗址公园活力带串联原点社区—众智园—大钟寺三处重点区域的连续无障碍路径（平整防滑路面、连续盲道与触觉引导、语音与大字导视、休息与人工陪行点）；任一 AI 导航节点均保留盲文触觉地图、纸质大字指南与非数字人工服务作为等效替代。
+
+
+
+> 诚实声明：上述 4 阶段机制与连续无障碍路径为设计推演，尚未发生真实公众参与或残障走查；正式实施前须补充真实用户调研与人工无障碍审查，不得以"已验证包容性"表述。
+
+
+
+### 可信治理工件：京张传承凭证（Relay Receipt，prior art #426 / #918）
+
+
+
+为把"AI 创新—公共利益—历史传承"的每一项主张变成可审计、可回滚的对象，本方案引入**京张传承凭证（Jingzhang Relay Receipt）**——一种机器可读的"最小可复现切片 / 凭证协议"治理工件，记录每一次场景开放、公众参与节点或空间干预的：凭证 ID、关联场景/图层、最小数据集、人工复核人、申诉与回滚状态、复算前置条件。
+
+
+
+设计方法引用 Relay Receipt 概念起源 **PR #426** 与其 v0.2 范例 **PR #918**（头部方案 #918 / Mentat-Uran）作为 prior art（见 [source:PRIOR-ART-RELAY-RECEIPT-426] 与 [source:PRIOR-ART-RELAY-RECEIPT-918]）；本方案为其独立衍生设计，**仅引用方法、不逐字复制其 schema**，以规避原创性与署名争议（参照上游 #706 复核）。
+
+
+
+最小可复现切片字段草案（概念稿，非最终 schema）：`receipt_id` / `scenario_ref`（SC-01..SC-10）/ `min_dataset`（数据最小化、授权与脱敏）/ `human_review`（人工复核人/机构与结论）/ `appeal_rollback`（申诉与回滚状态）/ `recalculation_prereq`（复算前置条件：官方 redline / 控规 / 权属）。该凭证与九字段场景卡、四阶段参与机制共同构成"主张—证据—复核—回滚"的可信链；凭证仅为方法建议，落地须经正式治理流程确认。
+
+
 
 ## AI 朝圣地标与公共空间组件库（agent.4）
 

@@ -167,5 +167,6 @@
       "assumptions": [],
       "reason": "Official height controls not provided."
     }
-  }
+  },
+  "boundary_offset_note": "提交几何使用的 PROV-SITE-001（约 11.4 km² 总体设计范围）与 OSM 实测京张铁路遗址公园不相交，最近距离约 412.5 m（见上游 issue #846）。该偏移意味着整套空间落点相对真实遗址公园可能存在约 412.5 m 的整体平移；所有面积与比例指标（site_area_sqm、green_space_area_sqm、public_space_area_sqm、building_footprint_area_sqm、green_ratio、public_space_ratio、building_density、key_area_*、phasing_area_sqm）均为 provisional 边界内部复算值，不代表与真实遗址公园对齐后的尺度，不得作为正式控规或红线依据。官方 redline 与遗址公园精确几何发布后须整体重算并对齐。"
 }
