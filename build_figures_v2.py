@@ -575,7 +575,7 @@ def build_fig_metrics_evidence(out_path):
         "核心指标复算证据",
         "GeoJSON 投影面积 (EPSG:4548) · site/phasing 面积差 16.918 ㎡为 provisional 边界容差")
     ax = fig.add_axes([0.06, 0.30, 0.62, 0.55])
-    ax.set_xlim(0, 1400); ax.set_ylim(0, 7); ax.set_facecolor("white")
+    ax.set_xlim(-200, 1400); ax.set_ylim(0, 7); ax.set_facecolor("white")
     metrics = [
         ("重点区域 (万㎡)", 369.3),
         ("分期面积 (万㎡)", 1141.3),

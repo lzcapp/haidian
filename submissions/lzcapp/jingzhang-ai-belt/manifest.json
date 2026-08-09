@@ -53,7 +53,7 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
-      "sha256": "70bf4d0220de251f819c9db374509bb388683e5110f1404e32093ca5486b5bd6"
+      "sha256": "23d5aa35c9f7c3a57401419b42a0a0f36d607fdda8378ad0fe5fa4d97ec7188e"
     },
     {
       "path": "assets/figures/metrics-evidence.v1.png",
