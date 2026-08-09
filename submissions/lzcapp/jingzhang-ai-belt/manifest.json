@@ -200,13 +200,13 @@
       "path": "self_check.json",
       "role": "config",
       "required": true,
-      "sha256": "8c4a0d826f6a0023e5bf0a958f2643229c2e69e8983c70abf790c24ab9589804"
+      "sha256": "c65071501b09f6d96813b43dcc73a81b2dfc69acaa9f253400fe46a9b909435c"
     },
     {
       "path": "sources.json",
       "role": "config",
       "required": true,
-      "sha256": "2b38e72666d15cf7903ff4ee11ff2ca352568031996a918f867704274ab88751"
+      "sha256": "f75a4c414a45d72e59cfd6c5ab6c5f3f00eadd1a1a294175513711315dfb65a0"
     },
     {
       "path": "standard_matrix.json",
