@@ -126,8 +126,8 @@ def draw_title_block(fig, fig_id, fig_name, fig_idx):
 
 def draw_wind_rose(fig):
     s = fig.add_axes([0, 0, 1, 1]); s.set_xlim(0, 1); s.set_ylim(0, 1); s.axis("off")
-    cx, cy, r = 0.92, 0.92, 0.05
-    box(s, cx - r - 0.01, cy - r - 0.01, 2 * r + 0.02, 2 * r + 0.04, r=0.004)
+    cx, cy, r = 0.90, 0.92, 0.05
+    box(s, cx - r - 0.03, cy - r - 0.01, 2 * r + 0.06, 2 * r + 0.04, r=0.004)
     s.add_patch(Circle((cx, cy), r, fill=False, ec=PAL["tier0_text"], lw=0.5))
     s.add_patch(Circle((cx, cy), r * 0.7, fill=False, ec=PAL["fig_block_divider"], lw=0.3))
     for ang_deg, w in [(0, 1.0), (90, 0.4), (180, 0.5), (270, 0.6)]:
@@ -139,9 +139,9 @@ def draw_wind_rose(fig):
         x2, y2 = cx + (r + 0.008) * np.cos(a), cy + (r + 0.008) * np.sin(a)
         s.plot([x1, x2], [y1, y2], color=PAL["tier0_text"], lw=0.5)
     text(s, cx, cy + r + 0.018, "N", size=9, weight="500", ha="center")
-    text(s, cx + r + 0.025, cy, "冬", size=7, color=PAL["tier1_text"])
-    text(s, cx - r - 0.025, cy, "夏", size=7, color=PAL["tier1_text"])
-    text(s, cx, cy - r - 0.012, "1:8000 风玫瑰", size=7, color=PAL["tier1_text"], ha="center")
+    text(s, cx + r + 0.018, cy, "冬", size=7, color=PAL["tier1_text"], ha="right", va="center")
+    text(s, cx - r - 0.018, cy, "夏", size=7, color=PAL["tier1_text"], ha="left", va="center")
+    text(s, cx, cy - r - 0.025, "比例 · 1:8000 · 风玫瑰", size=7, color=PAL["tier1_text"], ha="center", va="center")
 
 
 def draw_scale_bar(ax, x, y, length_m, segments=2, label="0..500..1000 m", color=None):
@@ -283,6 +283,34 @@ def add_key_area(ax, cx, cy, label, sublabel):
          bbox=dict(facecolor="white", edgecolor=PAL["tier1"], lw=0.6, boxstyle="round,pad=0.3", alpha=0.95))
 
 
+# (cx, cy, label, range_disc_radius)
+CORRIDOR_KEYPOINTS = [
+    (0.293, 0.84, "众智园 AI 自主创新加速区", 0.035),
+    (0.293, 0.50, "北京 AI 原点社区", 0.045),
+    (0.293, 0.13, "大钟寺 AI 产业聚集区", 0.040),
+]
+
+
+def add_corridor_keypoints(ax, with_range_disc=True):
+    """Draw the three key areas (with optional semi-transparent range discs so labels
+    sit over a visible color block) and four illustrative transit stations.
+
+    The bottom station is repositioned to (0.405, 0.10) so its white-box label
+    stays clear of the '大钟寺 AI 产业聚集区' key-area label above its circle.
+    """
+    if with_range_disc:
+        for cx, cy, _, r in CORRIDOR_KEYPOINTS:
+            ax.add_patch(Circle((cx, cy), r, fc=PAL["key_area"], ec=PAL["tier2_text"],
+                                lw=1.0, alpha=0.45, zorder=4))
+    for cx, cy, label, _ in CORRIDOR_KEYPOINTS:
+        add_key_area(ax, cx, cy, label, "")
+    add_station(ax, 0.355, 0.80, "北五环 站(示意)", "right")
+    add_station(ax, 0.207, 0.74, "清华东路西口 站(示意)", "left")
+    add_station(ax, 0.355, 0.50, "北沙滩 站(示意)", "right")
+    # bottom station: shifted down-right so its label clears the key-area label
+    add_station(ax, 0.405, 0.10, "大钟寺 站(示意)", "right")
+
+
 def corridor_outline(ax, color="black", lw=1.0):
     pts = [
         (0.12, 0.06), (0.14, 0.10), (0.13, 0.18), (0.12, 0.28),
@@ -330,15 +358,9 @@ def build_fig_site_overview(out_path):
     ax.plot([0.293, 0.293], [0.07, 0.92], color=PAL["water"], lw=2.0, zorder=3, alpha=0.8)
     ax.plot([0.293, 0.293], [0.07, 0.92], color=PAL["greenway"], lw=8, zorder=2.5, alpha=0.4,
             dashes=(2, 1))
-    add_key_area(ax, 0.293, 0.84, "众智园 AI 自主创新加速区", "")
-    add_key_area(ax, 0.293, 0.50, "北京 AI 原点社区", "")
-    add_key_area(ax, 0.293, 0.13, "大钟寺 AI 产业聚集区", "")
-    add_station(ax, 0.355, 0.80, "北五环 站(示意)", "right")
-    add_station(ax, 0.207, 0.74, "清华东路西口 站(示意)", "left")
-    add_station(ax, 0.355, 0.50, "北沙滩 站(示意)", "right")
-    add_station(ax, 0.355, 0.16, "大钟寺 站(示意)", "right")
+    add_corridor_keypoints(ax, with_range_disc=True)
     text(ax, 0.293, 0.04, "PROV-SITE-001 · ~11.4 km²", size=8, color=PAL["tier1_text"], ha="center")
-    draw_scale_bar(ax, 0.21, 0.005, length_m=0.06, label="0..500..1000 m")
+    draw_scale_bar(ax, 0.21, 0.012, length_m=0.06, label="0..500..1000 m")
     draw_wind_rose(fig)
     draw_metadata_block(fig)
     draw_land_use_legend(fig, LU_ITEMS, LU_GROUPS)
@@ -380,17 +402,9 @@ def build_fig_key_areas(out_path):
             xc = x_start + c * cell_w
             color = PAL["key_building"] if rng.random() < 0.45 else (PAL["residential"] if rng.random() < 0.5 else PAL["mixed"])
             ax.add_patch(Rectangle((xc, yc), cell_w * 0.92, row_h * 0.85, fc=color, ec=PAL["fig_block_divider"], lw=0.2, zorder=2))
-    for cx, cy, r in [(0.293, 0.84, 0.035), (0.293, 0.50, 0.045), (0.293, 0.13, 0.040)]:
-        ax.add_patch(Circle((cx, cy), r, fc=PAL["key_area"], ec=PAL["tier2_text"], lw=1.0, alpha=0.45, zorder=4))
-    add_key_area(ax, 0.293, 0.84, "众智园 AI 自主创新加速区", "")
-    add_key_area(ax, 0.293, 0.50, "北京 AI 原点社区", "")
-    add_key_area(ax, 0.293, 0.13, "大钟寺 AI 产业聚集区", "")
-    add_station(ax, 0.355, 0.80, "北五环 站(示意)", "right")
-    add_station(ax, 0.207, 0.74, "清华东路西口 站(示意)", "left")
-    add_station(ax, 0.355, 0.50, "北沙滩 站(示意)", "right")
-    add_station(ax, 0.355, 0.16, "大钟寺 站(示意)", "right")
+    add_corridor_keypoints(ax, with_range_disc=True)
     text(ax, 0.293, 0.04, "PROV-SITE-001 · ~11.4 km²", size=8, color=PAL["tier1_text"], ha="center")
-    draw_scale_bar(ax, 0.21, 0.005, length_m=0.06, label="0..500..1000 m")
+    draw_scale_bar(ax, 0.21, 0.012, length_m=0.06, label="0..500..1000 m")
     draw_wind_rose(fig)
     draw_metadata_block(fig)
     s = fig.add_axes([0, 0, 1, 1]); s.set_xlim(0, 1); s.set_ylim(0, 1); s.axis("off")
@@ -449,7 +463,7 @@ def build_fig_land_use_structure(out_path):
             xc = 0.205 + col_idx * 0.024
             ax.add_patch(Rectangle((xc, yc), col_w * 0.85, 0.035, fc=color, ec=PAL["fig_block_divider"], lw=0.2, zorder=2))
     text(ax, 0.293, 0.04, "PROV-SITE-001 · 单元数按地理分布示意", size=8, color=PAL["tier1_text"], ha="center")
-    draw_scale_bar(ax, 0.21, 0.005, length_m=0.06, label="0..500..1000 m")
+    draw_scale_bar(ax, 0.21, 0.012, length_m=0.06, label="0..500..1000 m")
     draw_wind_rose(fig)
     draw_metadata_block(fig)
     s = fig.add_axes([0, 0, 1, 1]); s.set_xlim(0, 1); s.set_ylim(0, 1); s.axis("off")
@@ -494,15 +508,9 @@ def build_fig_mobility_bluegreen(out_path):
     ax.plot([0.205, 0.39], [0.55, 0.55], color=PAL["primary_road"], lw=2.0, zorder=3)
     ax.plot([0.205, 0.39], [0.30, 0.30], color=PAL["primary_road"], lw=2.0, zorder=3)
     ax.plot([0.205, 0.39], [0.75, 0.75], color=PAL["secondary_road"], lw=1.4, zorder=3)
-    add_key_area(ax, 0.293, 0.84, "众智园 AI 自主创新加速区", "")
-    add_key_area(ax, 0.293, 0.50, "北京 AI 原点社区", "")
-    add_key_area(ax, 0.293, 0.13, "大钟寺 AI 产业聚集区", "")
-    add_station(ax, 0.355, 0.80, "北五环 站(示意)", "right")
-    add_station(ax, 0.207, 0.74, "清华东路西口 站(示意)", "left")
-    add_station(ax, 0.355, 0.50, "北沙滩 站(示意)", "right")
-    add_station(ax, 0.355, 0.16, "大钟寺 站(示意)", "right")
+    add_corridor_keypoints(ax, with_range_disc=True)
     text(ax, 0.293, 0.04, "PROV-SITE-001 · 蓝绿楔骨架", size=8, color=PAL["tier1_text"], ha="center")
-    draw_scale_bar(ax, 0.21, 0.005, length_m=0.06, label="0..500..1000 m")
+    draw_scale_bar(ax, 0.21, 0.012, length_m=0.06, label="0..500..1000 m")
     draw_wind_rose(fig)
     draw_metadata_block(fig)
     s = fig.add_axes([0, 0, 1, 1]); s.set_xlim(0, 1); s.set_ylim(0, 1); s.axis("off")
