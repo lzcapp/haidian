@@ -455,14 +455,33 @@ def build_fig_land_use_structure(out_path):
         ("park", 4, PAL["park"]),
         ("greenway", 1, PAL["greenway"]),
     ]
-    rng = np.random.default_rng(44)
-    for col_idx, (key, n_units, color) in enumerate(use_pal):
-        col_w = 0.18 / 4
-        for u in range(n_units):
-            yc = 0.07 + (u % 22) * 0.04
-            xc = 0.205 + col_idx * 0.024
-            ax.add_patch(Rectangle((xc, yc), col_w * 0.85, 0.035, fc=color, ec=PAL["fig_block_divider"], lw=0.2, zorder=2))
-    text(ax, 0.293, 0.04, "PROV-SITE-001 · 单元数按地理分布示意", size=8, color=PAL["tier1_text"], ha="center")
+    # 按比例列高 waffle: 列高 ∝ 单元数,全部落在走廊轮廓内(y=0.06..0.92)留上下 0.03 边距
+    y_top = 0.89
+    y_bot = 0.09
+    avail_h = y_top - y_bot  # 0.80
+    max_n = max(n for _, n, _ in use_pal)  # 75
+    x_left, x_right = 0.165, 0.420
+    n_cols = len(use_pal)
+    col_w = (x_right - x_left) / n_cols  # 0.0319
+    cell_pad = 0.0006
+    cells_per_col = 2  # 每列每行 2 格,75 单元=38 行
+    for col_idx, (key, n, color) in enumerate(use_pal):
+        col_h = (n / max_n) * avail_h
+        n_rows = int(np.ceil(n / cells_per_col))
+        cell_h = col_h / n_rows
+        cell_w = (col_w - cell_pad * (cells_per_col + 1)) / cells_per_col
+        x_col = x_left + col_idx * col_w
+        for i in range(n):
+            row_from_bot = (n - 1 - i) // cells_per_col  # 从底向上数
+            col_in_row = (n - 1 - i) % cells_per_col  # 0=左,1=右(从底向上从左到右填)
+            xc = x_col + cell_pad + col_in_row * (cell_w + cell_pad)
+            yc = y_bot + row_from_bot * cell_h
+            ax.add_patch(Rectangle((xc, yc), cell_w, cell_h * 0.92, fc=color, ec=PAL["fig_block_divider"], lw=0.2, zorder=2))
+        # 柱顶单元数标签
+        text(ax, x_col + col_w / 2, y_bot + col_h + 0.010, f"{n}", size=8, color=PAL["tier1_text"], ha="center")
+    # 基线(走廊内 0 单元参考线)
+    ax.plot([x_left, x_right], [y_bot, y_bot], color=PAL["fig_block_divider"], lw=0.5, zorder=1)
+    text(ax, 0.293, 0.04, "PROV-SITE-001 · 列高 ∝ 单元数(75..1)", size=8, color=PAL["tier1_text"], ha="center")
     draw_scale_bar(ax, 0.21, 0.012, length_m=0.06, label="0..500..1000 m")
     draw_wind_rose(fig)
     draw_metadata_block(fig)
@@ -474,19 +493,22 @@ def build_fig_land_use_structure(out_path):
     items_zh = {"commercial":"商业服务业用地","residential":"城镇住宅用地","research":"科研用地 (AI R&D)",
                 "culture":"文化用地","mixed":"战略留白/混合","education":"教育用地",
                 "park":"公园绿地","greenway":"防护/滨水绿地"}
+    # 右侧图例:双行布局 — 细色条(宽 ∝ 单元数)在上,全名标签在下
+    legend_max_w = w - 0.04
     for i, (key, n, color) in enumerate(use_pal):
-        ry = y0 + h - 0.05 - i * 0.038
-        s.add_patch(Rectangle((x0 + 0.018, ry - 0.008), 0.014, 0.014, fc=color, ec=PAL["fig_block_divider"], lw=0.3, clip_on=False))
-        text(s, x0 + 0.04, ry, f"{items_zh[key]} ({n} 单元)", size=8)
+        ry_bar = y0 + h - 0.05 - i * 0.044
+        sw_w = legend_max_w * (n / 75)
+        s.add_patch(Rectangle((x0 + 0.018, ry_bar - 0.004), sw_w, 0.008, fc=color, ec=PAL["fig_block_divider"], lw=0.3, clip_on=False))
+        text(s, x0 + 0.018, ry_bar - 0.020, f"{items_zh[key]}  ({n} 单元)", size=8)
     draw_structure_legend(fig, [
         ("prov", _swatch_prov, "provisional 临时边界"),
     ])
     draw_caveats(fig, [
         "① 单元数按本方案提交包中的地块语义单元统计,非官方控规单元;与 PROV-SITE-001 整体范围一致。",
-        "② 配色与单元分布为概念示意,落地须以官方控规单元为准。",
+        "② 列高按单元数线性映射(列高 ∝ 单元数,75 单元顶到 0.89,1 单元仅 1 格),配色与单元分布为概念示意,落地须以官方控规单元为准。",
         "③ 单元数排序仅供本表阅读,不代表规划优先级。",
     ])
-    draw_chapter_caption(fig, "3", "用地分区结构:8 类用地按单元数排序(商业 75 / 住宅 70 居前)。")
+    draw_chapter_caption(fig, "3", "用地分区结构:8 类用地按单元数排序(列高 ∝ 单元数,商业 75 / 住宅 70 居前)。")
     draw_title_block(fig, "JZ-OV-03", "用地分区结构", "3")
     fig.savefig(out_path, dpi=100, facecolor="white", bbox_inches=None)
     plt.close(fig)
