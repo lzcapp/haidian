@@ -25,10 +25,24 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
+      "sha256": "7e819898ff1b1e9bae2f17c6954c1ea2f80d2981519bd0e1c52d61c45a05a80f"
+    },
+    {
+      "path": "assets/figures/key-areas.v1.png",
+      "role": "proposal_figure",
+      "required": true,
+      "language": "zh",
       "sha256": "ff89ab8799c11f19f87233a9a8570d07fbf5a1de60d51a6d3a838400c037ccbe"
     },
     {
       "path": "assets/figures/land-use-structure.png",
+      "role": "proposal_figure",
+      "required": true,
+      "language": "zh",
+      "sha256": "a4b5286387730d7e545a8595057138655afd12d3d1c0acf14df2375d227cebdf"
+    },
+    {
+      "path": "assets/figures/land-use-structure.v1.png",
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
@@ -39,6 +53,13 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
+      "sha256": "2879e3aab0f7202f86f35a26a2c66b36be67044069ec7b9e2a0ce539fcb50a59"
+    },
+    {
+      "path": "assets/figures/metrics-evidence.v1.png",
+      "role": "proposal_figure",
+      "required": true,
+      "language": "zh",
       "sha256": "1bd38f59dfc3a6ed5ab9917f115e19c21d334ad84dbab6fb447712de8ac8e56c"
     },
     {
@@ -46,10 +67,24 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
+      "sha256": "dc33fb69a837aa138b7e7687e8f47e6fa06f71226550c45d8389fa9cae9672f0"
+    },
+    {
+      "path": "assets/figures/mobility-bluegreen.v1.png",
+      "role": "proposal_figure",
+      "required": true,
+      "language": "zh",
       "sha256": "b06a07152d36599291215c837d7bcdb8dbc5ff9a355a7490d0377c74b98f995a"
     },
     {
       "path": "assets/figures/site-overview.png",
+      "role": "proposal_figure",
+      "required": true,
+      "language": "zh",
+      "sha256": "7e78617040d351f55ded4c69e85b7b2d78d4734e92317405c8461a47b2ce3c3f"
+    },
+    {
+      "path": "assets/figures/site-overview.v1.png",
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
