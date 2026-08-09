@@ -11,6 +11,24 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 
 # Centennial Jing-Zhang AI Innovation Belt · Smart-Corridor Urban Design Proposal
 
+## Figure Metadata Specification (figure metadata spec)
+
+All overview / district / section / data figures in this proposal (`assets/figures/*.png`, 5 images) are normalized per CJJ/T 97-2003 *Urban Planning Cartographic Standards* + GB/T 20257-2017 *Cartographic Symbols for National Basic-Scale Topographic Maps* + GB 50137-2011 *Code for Classification of Urban Land Use and Planning Construction Land* (see `typesetting_review.md` at repo root):
+
+- **Title block** (bottom-right): map name, sheet No. `JZ-OV-01`, scale 1:8000, coordinate system CGCS2000, projection Gauss–Krüger 3° zone 117°E, vertical datum 1985 National Height Datum, design unit lzcapp (open-source, no qualification statement), drawing date 2026-08-09, version v2.4, security class public.
+- **Wind rose** (top-right): north arrow + winter/summer prevailing wind frequency + main-axis inclination.
+- **Scale bar** (bottom of main map): linear `0 ━━ 500 ━━ 1000 m` + scale note.
+- **Metadata block** (top-right / bottom-left): coordinate system / projection / central meridian / drawing date / data cutoff / data source.
+- **Dual legend** (vertical, mid-right): land-use classification legend (grouped by residential / public & industrial / green & water / transport) + planning-structure legend (core area / water blue corridor / blue-green wedge skeleton / provisional interim boundary).
+- **Standard footnotes** (three numbered lines at bottom): ① 412.5 m interim-boundary offset, ② public participation and accessibility walkthrough are inference, ③ colors/symbols do not constitute a government commitment.
+- **Font**: Microsoft YaHei (system font, license respected), see [source:FIG-FONT-MS-YAHEI].
+
+**Drawing version**: v2.4 (all 5 PNGs have been normalized to the 14-point spec; see `metrics.json` `figure_layout_compliance.current_state.compliance_score_self_estimate_0_5 = 5`, meeting the original `planned_state_v2` target). The v1.0 original raster is at [source:FIG-OVERVIEW-V1].
+
+**Figure-source / standard references**: [source:FIG-OVERVIEW-V1] (v1 original overview, [source:FIG-FONT-MS-YAHEI] font), [source:FIG-LAYOUT-SPEC] (14-point renovation guide), [source:FIG-STD-CJJ97] (CJJ/T 97-2003 Urban Planning Cartographic Standards), [source:FIG-STD-GB50137] (GB 50137-2011 Land-Use Classification and Planning Construction-Land Standard).
+
+Honest statement: this figure specification is a methodological suggestion, not an approved conclusion; formal cartography must be reviewed by a unit holding urban-rural planning qualification (Grade B or above). This proposal does not claim to hold such qualification.
+
 ## Executive Summary (Review Snapshot)
 
 **Positioning & naming**: Targeting the three fused belts — "Centennial Jing-Zhang cultural belt, urban AI living-experience belt, AI fusion-innovation belt" — the final name is **Jing-Zhang AI Symbiosis Belt** ("smart pulse" echoes the smart corridor and AI innovation chain; "symbiosis" stresses coexistence of history, innovation and public life). The visual motif is "linear light-band + rail-section" (see `visual/assets/logo_direction.svg`).
