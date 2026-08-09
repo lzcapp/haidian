@@ -29,13 +29,13 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 | 功能匹配度 function_match | 五大功能 × 三区两翼协同回路 | 生态图谱 `visual/assets/ecosystem_map.json` |
 | 品牌识别度 brand_identity | 定稿命名 + 品牌识别系统 + 文化符号体系 + 三地标可识别视觉 | `visual/assets/brand_system.svg`、`visual/assets/cultural_symbols.svg`、`visual/assets/landmarks_board.svg`、`visual/assets/logo_direction.svg` |
 | 区域协同性 regional_synergy | 与未来科学城/怀柔/经开区/京津冀协同 | 生态图谱协同节点 |
-| 规划创新性 planning_innovation | AI 原生运行回路、国土空间创新思路 | AI 生态与场景章节 |
+| 规划创新性 planning_innovation | AI 原生运行回路、京张传承凭证(Relay Receipt)治理工件、拆改留五闸门、国土空间创新思路 | AI 生态与场景章节、京张传承凭证节 |
 | 产业支撑度 industry_support | 全栈自主体系、要素保障、测试与场景开放机制 | 案例对标、生态图谱 |
-| 场景可感知度 scenario_perceptibility | 10 张场景卡 + 3 个测试验证场景 | 场景表、`visual/assets/scenarios.json` |
+| 场景可感知度 scenario_perceptibility | 10 张九字段场景卡（服务对象/空间/运营/最小数据/隐私/人工复核/非AI替代/申诉/停止条件）+ SC-01~03 产业测试验证场景 | `visual/assets/scenario_cards.json` |
 | 空间明确性 spatial_clarity | 场景/地标/更新项目挂接到具体图层 | GeoJSON 图层与 metrics |
-| 可转化性 transferability | 结构化数据 + 合规矩阵可继续深化 | compliance_matrix.json |
+| 可转化性 transferability | 结构化数据 + 合规矩阵 + 成本五本账(unknown) + 分期证据闸门可继续深化 | compliance_matrix.json、renewal_projects.json |
 | 表达完整性 expression_completeness | 文本/图/表/场景卡/HTML/Logo 完整成果 | report/*.html、本提案 |
-| 公开合规性 public_compliance | 无涉密、无伪精确、版权清单 | copyright_statement.md |
+| 公开合规性 public_compliance | 无涉密、无伪精确、版权清单、412.5m 临时边界偏移声明(boundary_offset_note)、诚实标注未真实走查 | copyright_statement.md、metrics.json |
 | 国际传播力 international_communication | 中英双语提案与传播文案 | proposal.en.md、文化叙事 |
 | 长期运营价值 long_term_operation_value | 年度活动体系、开发者社区与招引转化 | `visual/assets/operations.json` |
 

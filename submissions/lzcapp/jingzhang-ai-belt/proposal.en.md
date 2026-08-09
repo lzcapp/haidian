@@ -29,13 +29,13 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 | function_match | Five functions × three zones, two wings loop | `visual/assets/ecosystem_map.json` |
 | brand_identity | Final name + light-band motif + SVG direction | `visual/assets/logo_direction.svg` |
 | regional_synergy | Synergy with Future Science City / Huairou / BDA / BTH | Ecosystem-map synergy nodes |
-| planning_innovation | AI-native loop, territorial-space innovation thinking | AI ecosystem & scenarios |
+| planning_innovation | AI-native loop, Jingzhang Relay Receipt governance artifact, retain-renovate-demolish five gates, territorial-space innovation | AI ecosystem & scenarios, Relay Receipt section |
 | industry_support | Full-stack autonomy, factor guarantee, test & scenario-open mechanisms | Case studies, ecosystem map |
-| scenario_perceptibility | 10 scenario cards + 3 test-validation scenarios | Scenario table, `visual/assets/scenarios.json` |
+| scenario_perceptibility | 10 nine-field scenario cards (service object/space/operation/min-data/privacy/human review/non-AI alternative/appeal/stop condition) + SC-01–SC-03 industry test-validation | `visual/assets/scenario_cards.json` |
 | spatial_clarity | Scenarios/landmarks/renewal items linked to layers | GeoJSON layers & metrics |
-| transferability | Structured data + compliance matrix for further deepening | compliance_matrix.json |
+| transferability | Structured data + compliance matrix + cost five-accounts (unknown) + phasing evidence gates for further deepening | compliance_matrix.json, renewal_projects.json |
 | expression_completeness | Text / figures / tables / cards / HTML / logo | report/*.html, this proposal |
-| public_compliance | No secrets, no false precision, rights manifest | copyright_statement.md |
+| public_compliance | No secrets, no false precision, rights manifest, 412.5 m provisional-boundary offset note (boundary_offset_note), honest 'no real walkthrough' disclosure | copyright_statement.md, metrics.json |
 | international_communication | Bilingual proposal & communication copy | proposal.zh/en, culture narrative |
 | long_term_operation_value | Annual activity system, dev community, conversion | `visual/assets/operations.json` |
 
@@ -102,6 +102,14 @@ Land classification follows [standard:MNR-LAND-USE-CLASSIFICATION-GUIDE]; height
 
 Building scale and intensity must agree with `metrics.json` and layers. Where total floor area, FAR, height, building density, green ratio, setback and building-control lines lack official conditions, they are listed as unknown or pending_control — never fixed numbers implying precision. The A3 booklet gives the renewal list and a metric recalculation table; the A0 boards show key spatial structure and key districts; the HTML page links metrics and layers.
 
+
+
+### Retain-Renovate-Demolish Five Gates (method, not conclusion)
+
+
+
+Retain-renovate-demolish draws no fabricated conclusions; it proceeds through five gates, each giving method, and any gate not passed downgrades to to-be-confirmed: ① status check (building footprint / ownership / as-built survey); ② compliance & heritage (regulatory plan, heritage and character constraints); ③ public interest & accessibility (whether it serves vulnerable groups and continuous accessibility); ④ reversibility & recalculation (whether reversible, whether area is geometrically recalculable); ⑤ human & community confirmation (operator and community co-decision). Gate output is a "deepening list", not an approved conclusion.
+
 ## Transport, Rail, Municipal and Public-Service Facilities
 
 Transport responds to the announcement's requirements for rail-station integration, road micro-circulation, slow-mobility gaps, external transport, parking, non-motorized parking and green transport, covering the North 5th Ring Road, the Jing-Zhang heritage-park cross-ring node, Wudaokou, Qinghua East Road West Gate, Dazhongsi station and key-enterprise connections. Road and slow-mobility layers stay within the submission boundary and cross-check with public space, green space, industry nodes and key districts; under a provisional boundary, transport conclusions are temporary design discussion only.
@@ -128,6 +136,22 @@ Project list and phasing depth are governed by [depth:renewal_project_list] and 
 
 Phasing is distinct from the 100-day submission cycle: the cycle is a deliverable deadline; phasing is the urban-renewal and construction path — near-term pilots, mid-term renewal, long-term governance. Items that can start with light facilities, operating activities and service platforms are separated from those awaiting official regulatory, municipal, transport and ownership confirmation. Annual events, developer-community operation, scenario open days, public-experience routes and international communication are described with object, frequency, responsibility boundary, conversion path and risk.
 
+
+
+### Cost Five-Accounts (amounts unknown)
+
+
+
+Renewal-project costs are registered under five accounts (personnel / space / equipment / data / public value); all amounts are unknown at concept stage, not estimates/budgets, and require investment appraisal before landing — not to be read as a government commitment. The five accounts align with the unknown control indicators in `metrics.json`, preventing them from being read as formal financial conclusions.
+
+
+
+### Phasing Evidence Gates
+
+
+
+Each phase (near-term pilot / mid-term renewal / long-term governance) has an evidence gate: advancing to the next phase requires prerequisite evidence — near-term pilot needs baseline, test sample and minimum success threshold; mid-term renewal needs official regulatory/ownership/municipal confirmation; long-term governance needs public-value recalculation and a public-adoption ledger. Failing a gate keeps the work in the current phase; no cross-phase promise.
+
 ## Metrics, Area Recalculation and Compliance Matrix
 
 The metric system includes overall-design area, key-area area, green and public-space ratios, building footprint, renewal-project count, AI scenario nodes, slow-mobility connectivity, industry-space indicators, talent-service indicators and self-check status. All known metrics are recalculable from GeoJSON or trusted sources; unknown metrics state reasons and formal-submission prerequisites. `scripts/spatial_review.py` and `scripts/visual_review.py` are key formal self-check evidence.
@@ -139,6 +163,10 @@ Quick metrics (recalculated from submitted geometry in EPSG:4548; precision limi
 **Area-topology difference note (≈16.9 m²)**: the submitted-geometry `site_area_sqm` = 11,412,825.386 m² and `phasing_area_sqm` = 11,412,842.304 m² differ by **16.918 m² (≈16.9 m²)**, caused by floating-point rounding and topology tolerance when partitioning the provisional boundary (the two layers' outer boundaries are not perfectly aligned) — **not a real area error**. This difference is registered in `metrics.json`'s `geometry_topology_note` and `visual/assets/renewal_projects.json`'s `geometry_area_note_zh`. All area/ratio indicators recalculated from submitted geometry remain limited by the provisional boundary and must be fully recalculated on official redline ([metric:site_area_sqm], [metric:phasing_area_sqm]).
 
 The compliance matrix is the master file for task responsiveness: every announcement task and agent_taskbook task maps to a report section, layer, metric, drawing, HTML page, source, assumption and self-check item. Failure to cover any mandatory task in announcement 1.3/1.4/1.5 or agent.1–agent.6 blocks formal professional scoring.
+
+
+
+See also `metrics.json`'s `boundary_offset_note`: the submitted geometry (PROV-SITE-001, ~11.4 km²) is offset from the OSM-mapped Jing-Zhang railway heritage park by about **412.5 m** (upstream issue #846); all area and ratio indicators are recalculation values internal to the provisional boundary, not scaled to the real heritage park, and must not be used as formal regulatory or redline basis — to be fully recalculated and aligned on official redline.
 
 ## Risk, Copyright and Compliance
 
@@ -178,6 +206,14 @@ The finalized Chinese/English names and subtitle are in the Brand section above;
 
 Visual-identity direction (concept, not final): a **linear light-band + rail-section** motif echoing "one belt, three cores, blue-green slow-mobility composite ring"; colors take the smart-corridor blue-green and key-area warm red; geometric, containing no copyrighted or trademarked imagery. Direction drafts are pure-geometry SVG under `visual/assets/logo_direction.svg` (generated locally, no external assets). All logos, fonts, images, portraits and enterprise marks require cleared rights before public use.
 
+
+
+**Finalized international sentence**: A railway of shared intelligence—tested in public, translated with care, returned to the city.
+
+
+
+**Reversible-component narrative**: all AI scenarios and spatial interventions are organized on the "reversible component" principle — any pilot can be exited via appeal/rollback, without locking in irreversible facilities or ownership changes; this aligns with the receipt's `appeal_rollback` field and the four-stage mechanism's "public adoption/rollback at closure", reflecting humble responsibility to the city and the public.
+
 ## Three Zones, Two Wings and Regional-Synergy Loop (agent.1)
 
 The "five major functions × three zones, two wings" coordination mechanism (table below) responds to regional synergy with the North Latitude community, Future Science City, Huairou Science City, the Economic-Technological Development Area and the Beijing-Tianjin-Hebei region:
@@ -213,11 +249,53 @@ An eight-element loop — land, space, industry, capital, talent, compute, data,
 
 ## AI Test & Verification Scenarios and Space-Operation Matrix (agent.3)
 
-No fewer than three complete "test object — space — data — access — safety — exit — operator" scenarios (see `visual/assets/scenarios.json`): ① autonomous-model red-team test field (Zhongzhiyuan safety-governance sandbox); ② edge-compute stress test (edge-compute station + slow-mobility ring); ③ accessible AI navigation pilot (heritage-park vitality belt + campus-park stitching). All scenarios set privacy boundaries (data minimization, no personal profiles, authorization & de-identification) and human review (machine scoring does not replace human judgement; machine vision does not certify color-vision or alt-text). The city agent only assists in identifying slow-mobility gaps, public-space heat and facility maintenance — it does not replace planning approval, output unauthorized personal profiles, or claim official implementation commitments.
+No fewer than three complete nine-field scenarios (service object / space / operation / min-data / privacy / human review / non-AI alternative / appeal / stop condition; see `visual/assets/scenario_cards.json`); SC-01–SC-03 are flagged as industry test-validation scenarios: ① autonomous-model red-team test field (Zhongzhiyuan safety-governance sandbox); ② edge-compute stress test (edge-compute station + slow-mobility ring); ③ accessible AI navigation pilot (heritage-park vitality belt + campus-park stitching). All scenarios set privacy boundaries (data minimization, no personal profiles, authorization & de-identification) and human review (machine scoring does not replace human judgement; machine vision does not certify color-vision or alt-text). The city agent only assists in identifying slow-mobility gaps, public-space heat and facility maintenance — it does not replace planning approval, output unauthorized personal profiles, or claim official implementation commitments.
 
 ## Personas, Vulnerable Groups and Non-Digital Alternatives (agent.3 / public interest)
 
 Five core personas (open-source developers, startups, enterprise visitors, residents, students) are retained, with five vulnerable-group personas added (elderly, children, disabled, caregivers, low-income workers) and non-digital alternatives (see `visual/assets/persona_table.json`): offline service desks, large-print paper guides, braille/tactile maps, community assemblies, assisted walking. Public participation runs through community assemblies, dual-track disclosure, activity tiering and accessible channels; AI only assists aggregation, decisions are made by humans and the community. Machine-generated personas do not claim field research; real user research and human accessibility review are required before implementation.
+
+
+
+### Four-Stage Public Participation Mechanism (public-interest closed loop)
+
+
+
+Public participation is designed as an auditable four-stage closed loop (structured in `visual/assets/persona_table.json`'s `participation_stages`):
+
+
+
+1. **Co-define before entry**: community council and dual-track notice, defining goals, boundaries, indicators and acceptable risk together with residents, disability orgs, and elderly/child representatives.
+
+2. **Walkthrough before opening**: before nodes open, organize disability, elderly and non-smartphone users for accessibility and usability walkthroughs, validating the continuous accessibility path and equivalent non-digital alternatives.
+
+3. **Feedback/appeal during operation**: on-site service desk and an anonymous online feedback/appeal channel; all inputs enter an adversarial review list, answered within 72h in adopt / partially-adopt / reject tri-state after human review.
+
+4. **Public adoption/rollback at closure**: at activity or pilot closure, publish the ledger and adoption results; nodes that miss thresholds or cause risk are rolled back, with recalculation prerequisites stated.
+
+
+
+**Continuous accessibility path**: a continuous accessible path linking the three key areas (Origin Community — Zhizhong Park — Dazhongsi) via the heritage-park vitality belt (even anti-slip surface, continuous tactile guidance, voice & large-print wayfinding, rest and assisted-walking points); every AI navigation node keeps braille/tactile maps, large-print paper guides and non-digital human service as equivalent alternatives.
+
+
+
+> Honest disclaimer: the four-stage mechanism and continuous accessibility path are design reasoning, not field-study conclusions; no real public participation or disability walkthrough has occurred — real user research and human accessibility review are required before implementation, and it must not be presented as "verified inclusivity".
+
+
+
+### Trustworthy Governance Artifact: Jingzhang Relay Receipt (prior art #426 / #918)
+
+
+
+To make every claim of "AI innovation — public interest — heritage continuity" auditable and reversible, this proposal introduces the **Jingzhang Relay Receipt** — a machine-readable "minimum reproducible slice / credential protocol" artifact recording, for each scenario opening, public-participation node or spatial intervention: receipt ID, linked scenario/layer, minimum dataset, human reviewer, appeal & rollback status, recalculation prerequisite.
+
+
+
+The design method cites the Relay Receipt conceptual origin **PR #426** and its v0.2 exemplar **PR #918** (top proposal #918 / Mentat-Uran) as prior art (see `sources.json`'s [source:PRIOR-ART-RELAY-RECEIPT-426] and [source:PRIOR-ART-RELAY-RECEIPT-918]); this proposal is an independent derivative — **method only, not a verbatim schema copy** — to avoid originality and attribution disputes (per upstream #706 review).
+
+
+
+Minimum reproducible slice field draft (concept, not final schema): `receipt_id` / `scenario_ref` (SC-01..SC-10) / `min_dataset` (data minimization, authorization, anonymization) / `human_review` (reviewer/institution and conclusion) / `appeal_rollback` (appeal & rollback status) / `recalculation_prereq` (official redline / regulatory plan / ownership). The receipt, the nine-field scenario cards and the four-stage mechanism form a "claim—evidence—review—rollback" trust chain; the receipt is a method suggestion only, subject to formal governance confirmation before landing.
 
 ## AI Pilgrimage Landmarks and Public-Space Component Library (agent.4)
 
