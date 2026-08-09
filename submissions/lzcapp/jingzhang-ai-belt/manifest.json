@@ -25,7 +25,7 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
-      "sha256": "cc87761fc9f19586a427850438c3068508b37f7bcda839369a0e551ce40af782"
+      "sha256": "b0d4b52652c650a0cbe8228c714757bfb0b8574a48dcff4281fb41b57c814069"
     },
     {
       "path": "assets/figures/key-areas.v1.png",
@@ -39,7 +39,7 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
-      "sha256": "75a8c844dde2b53a99bcfa5dd16075a619da7ab32e1202c090539a75a3a33bab"
+      "sha256": "b344b009fa92ad0c4fc8b3f044925a78ff8298b4d5506fa44e743dded296137b"
     },
     {
       "path": "assets/figures/land-use-structure.v1.png",
@@ -53,7 +53,7 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
-      "sha256": "23d5aa35c9f7c3a57401419b42a0a0f36d607fdda8378ad0fe5fa4d97ec7188e"
+      "sha256": "798138d2587a382c2b98c9f3f6b20e6354ff4b41f6c6cce6d5b37e28da13f77a"
     },
     {
       "path": "assets/figures/metrics-evidence.v1.png",
@@ -67,7 +67,7 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
-      "sha256": "ab6d519f947dec62830a77d1204c080c9820e9f2a6e092e55b8cd69f9a33df36"
+      "sha256": "fbc0e37b6a33dfe640a11dbb82f5cd49cb5e4c56bf94a31c5a34b97886a22350"
     },
     {
       "path": "assets/figures/mobility-bluegreen.v1.png",
@@ -81,7 +81,7 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
-      "sha256": "7a98e81511379739622a71fa944a9f47c224800a3ae7d3668581909508cdeb10"
+      "sha256": "ba49e9bd4f387ee6a383cf7df9cf6756fb6a2f903e0c52922d277b1f553d20ca"
     },
     {
       "path": "assets/figures/site-overview.v1.png",
@@ -185,7 +185,7 @@
       "path": "metrics.json",
       "role": "config",
       "required": true,
-      "sha256": "c02b8677bee2298720638c43ca17cbd613f87ba871f82203f13491b8fe59cf05"
+      "sha256": "4626806cad93e48f6435e59bb87e013eb7b208bb686027793564758924997fd7"
     },
     {
       "path": "proposal.en.md",
@@ -200,7 +200,7 @@
       "role": "narrative",
       "required": true,
       "language": "zh",
-      "sha256": "dbf185244194485a51bc9a45ba711db7a66835cae959ec7b784cf5d5ef5601dd"
+      "sha256": "4356f9c7e2f10e94d3926c19098caca79154e57f2dfee83e60749b190b409f4c"
     },
     {
       "path": "report/copyright_statement.md",

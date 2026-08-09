@@ -126,7 +126,7 @@ def draw_title_block(fig, fig_id, fig_name, fig_idx):
 
 def draw_wind_rose(fig):
     s = fig.add_axes([0, 0, 1, 1]); s.set_xlim(0, 1); s.set_ylim(0, 1); s.axis("off")
-    cx, cy, r = 0.90, 0.92, 0.05
+    cx, cy, r = 0.90, 0.90, 0.05
     box(s, cx - r - 0.03, cy - r - 0.01, 2 * r + 0.06, 2 * r + 0.04, r=0.004)
     s.add_patch(Circle((cx, cy), r, fill=False, ec=PAL["tier0_text"], lw=0.5))
     s.add_patch(Circle((cx, cy), r * 0.7, fill=False, ec=PAL["fig_block_divider"], lw=0.3))

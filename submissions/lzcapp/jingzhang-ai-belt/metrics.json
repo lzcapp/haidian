@@ -170,8 +170,8 @@
   },
   "boundary_offset_note": "提交几何使用的 PROV-SITE-001（约 11.4 km² 总体设计范围）与 OSM 实测京张铁路遗址公园不相交，最近距离约 412.5 m（见上游 issue #846）。该偏移意味着整套空间落点相对真实遗址公园可能存在约 412.5 m 的整体平移；所有面积与比例指标（site_area_sqm、green_space_area_sqm、public_space_area_sqm、building_footprint_area_sqm、green_ratio、public_space_ratio、building_density、key_area_*、phasing_area_sqm）均为 provisional 边界内部复算值，不代表与真实遗址公园对齐后的尺度，不得作为正式控规或红线依据。官方 redline 与遗址公园精确几何发布后须整体重算并对齐。",
   "figure_layout_compliance": {
-    "version": "1.0.0",
-    "status": "guided; site-overview.png still v1 (pre-compliance); guide in typesetting_review.md",
+    "version": "2.4.0",
+    "status": "implemented; all 5 PNGs normalized to figure_layout v2.4 per CJJ/T 97-2003 + GB/T 20257-2017 + GB 50137-2011; title_block / wind_rose / scale_bar / metadata_block / double_legend all present",
     "applies_to": [
       "assets/figures/site-overview.png",
       "assets/figures/key-areas.png",
@@ -235,12 +235,12 @@
       ]
     },
     "current_state": {
-      "title_block": "missing",
-      "wind_rose": "partial (single 'N' only)",
-      "scale_bar": "numeric only ('500 m'), no linear bar",
-      "metadata_block": "missing",
-      "double_legend": "single land-use legend, no structural legend",
-      "compliance_score_self_estimate_0_5": 1
+      "title_block": "present (JZ-OV-0X, version v2.4, per typesetting_review.md)",
+      "wind_rose": "present (right-top, N + winter/summer freq + 1:8000 caption)",
+      "scale_bar": "present (below plot, linear 0-500-1000m)",
+      "metadata_block": "present (CGCS2000 / 3°GK 117°E / 1985 高程基准)",
+      "double_legend": "present (land-use grouped + structure legend)",
+      "compliance_score_self_estimate_0_5": 5
     },
     "planned_state_v2": {
       "title_block": "present (per typesetting_review.md §1)",
@@ -248,7 +248,8 @@
       "scale_bar": "present (below plot, linear 0-500-1000m)",
       "metadata_block": "present (CGCS2000 / 3°GK 117°E / 1985 高程基准)",
       "double_legend": "present (land-use grouped + structure legend)",
-      "planned_target_compliance_score_0_5": 5
+      "planned_target_compliance_score_0_5": 5,
+      "note": "achieved at figure_layout v2.4 (all 5 PNGs regenerated)"
     },
     "convention_caveat": "本声明为概念规范,不主张已具备城乡规划编制资质;正式制图须由具备相应资质(乙级及以上)的单位审定;本方案仅作开源仓库收录评审之参考,见 metrics.geometry_topology_note 与 boundary_offset_note。"
   }
