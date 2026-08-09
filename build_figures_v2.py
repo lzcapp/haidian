@@ -391,10 +391,10 @@ def build_fig_key_areas(out_path):
     ax = fig_axes(fig, (0.10, 0.62), (0.05, 0.94), x_off=0.04, y_off=0.30, w=0.58, h=0.62)
     corridor_outline(ax, color=PAL["tier0_text"], lw=1.2)
     rng = np.random.default_rng(43)
-    n_rows = 28
+    n_rows = 27
     row_h = 0.031
     for r in range(n_rows):
-        yc = 0.06 + r * row_h
+        yc = 0.07 + r * row_h
         x_start, x_end = 0.205 + rng.uniform(-0.005, 0.005), 0.39 - rng.uniform(-0.005, 0.005)
         n_cells = rng.integers(5, 9)
         cell_w = (x_end - x_start) / n_cells
@@ -575,7 +575,7 @@ def build_fig_metrics_evidence(out_path):
         "核心指标复算证据",
         "GeoJSON 投影面积 (EPSG:4548) · site/phasing 面积差 16.918 ㎡为 provisional 边界容差")
     ax = fig.add_axes([0.06, 0.30, 0.62, 0.55])
-    ax.set_xlim(0, 1300); ax.set_ylim(0, 7); ax.set_facecolor("white")
+    ax.set_xlim(0, 1400); ax.set_ylim(0, 7); ax.set_facecolor("white")
     metrics = [
         ("重点区域 (万㎡)", 369.3),
         ("分期面积 (万㎡)", 1141.3),
@@ -590,7 +590,7 @@ def build_fig_metrics_evidence(out_path):
         ax.barh(y, val, height=0.7, color=bar_color, edgecolor=PAL["tier0_text"], lw=0.3)
         text(ax, val + 10, y, f"≈{val}△", size=9, va="center", color=PAL["tier0_text"])
         text(ax, -5, y, label, size=9, ha="right", va="center", color=PAL["tier0_text"])
-    ax.set_xticks([0, 200, 400, 600, 800, 1000, 1200])
+    ax.set_xticks([0, 200, 400, 600, 800, 1000, 1200, 1400])
     ax.tick_params(axis="x", labelsize=8, colors=PAL["tier1_text"])
     ax.tick_params(axis="y", labelleft=False, length=0)
     ax.set_xlabel("面积 (万平方米)", fontsize=9, color=PAL["tier1_text"])

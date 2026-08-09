@@ -25,7 +25,7 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
-      "sha256": "d5a9b6f2431fd2506a169134060d630c1e85b3ad2566cc9b06be4b966e283403"
+      "sha256": "e2ba0acd70e24bdb9eec7b94dd72a439cf19afc3de6861ddaa5b9b79ad51036c"
     },
     {
       "path": "assets/figures/key-areas.v1.png",
@@ -53,7 +53,7 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
-      "sha256": "06b1f15acd7761446f46013611cd83a87bf6f5372822156332602ea65cd9043d"
+      "sha256": "0cd5829b52bf389a8c9792ab95ee639a65719e1f77c96c933d8e5eca14caad5c"
     },
     {
       "path": "assets/figures/metrics-evidence.v1.png",
