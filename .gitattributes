@@ -1,0 +1,10 @@
+# Ensure text files in the submission package stay LF regardless of platform.
+# Without this, Windows tools (Notepad, some IDEs) re-introduce CRLF on save,
+# which causes Markdown tables to collapse to a single line in some renderers.
+submissions/**/*.md        text eol=lf
+submissions/**/*.json      text eol=lf
+submissions/**/*.html      text eol=lf
+submissions/**/*.css       text eol=lf
+submissions/**/*.js        text eol=lf
+submissions/**/*.csv       text eol=lf
+submissions/**/*.txt       text eol=lf
