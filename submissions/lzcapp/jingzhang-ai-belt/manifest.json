@@ -150,7 +150,7 @@
       "path": "metrics.json",
       "role": "config",
       "required": true,
-      "sha256": "926ad477f5f49a5920b95c804096fc4977f2166a0298daa3c2970ef679541de2"
+      "sha256": "c35a483a6b10cf3704b9c16a02bb00bcb463e3481e44b4ff6180f8b26b35e14e"
     },
     {
       "path": "proposal.en.md",
@@ -165,7 +165,7 @@
       "role": "narrative",
       "required": true,
       "language": "zh",
-      "sha256": "f695786d3bc879d42f75b8d1c504e186e23dcb72e8bf3f719c7b8dbec68bdf35"
+      "sha256": "e6d2eefbb3a44108233b01dd024b3e2a11f8262c4b32a9bc11f4db5c03caa476"
     },
     {
       "path": "report/copyright_statement.md",
@@ -206,7 +206,7 @@
       "path": "sources.json",
       "role": "config",
       "required": true,
-      "sha256": "47ea8996856dc7174fa11d0c228d0b9a27f3060caa498fed81107d5038000d3e"
+      "sha256": "369d0b5f489eec2bd8f873e09a5a90df05823e6b426af541103412af9fcef4b7"
     },
     {
       "path": "standard_matrix.json",

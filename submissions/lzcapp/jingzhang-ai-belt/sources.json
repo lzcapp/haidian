@@ -171,6 +171,51 @@
       "usage": "Relay Receipt v0.2 与九字段场景卡格式的范例（头部方案 #918 / Mentat-Uran）；本方案九字段场景卡字段顺序与之对齐作为 prior art 引用。",
       "usable_for": "九字段场景卡格式与凭证协议字段对齐参考。",
       "not_usable_for": "作为本方案场景卡或凭证的逐字复制来源；不主张与之相同的原创性贡献。"
+    },
+    {
+      "id": "FIG-OVERVIEW-V1",
+      "source_type": "internal_figure",
+      "authority_level": "internal",
+      "path": "assets/figures/site-overview.png",
+      "usage": "本方案主图(总览地图·一帯三核),v1 原版位图,matplotï»¿lib Agg 渲染(见 report/copyright_statement.md L19)。",
+      "usable_for": "作为本方案总览概念示意,提供三核分布、用地色块、地铁站位与水系蓝廊的整体意象。",
+      "not_usable_for": "作为已具备城乡规划编制资质的审定图;作为正式控规/红线依据;v1 不含图签栏/风玫瑰/双图例/规范脚注,不得在评审外场合引用为'规范化'图。"
+    },
+    {
+      "id": "FIG-LAYOUT-SPEC",
+      "source_type": "internal_guideline",
+      "authority_level": "guideline",
+      "path": "../typesetting_review.md",
+      "usage": "本方案 14 条图面规范化改造指南(CJJ/T 97-2003 等行业标准对照),作为图源重制(v2)的实施依据。",
+      "usable_for": "作为 v2 图源重制(v2.0)的规范依据与设计师/工程师参考。",
+      "not_usable_for": "作为城乡规划编制资质声明;作为审定图;作为正式控规依据。"
+    },
+    {
+      "id": "FIG-FONT-MS-YAHEI",
+      "source_type": "font_reference",
+      "authority_level": "system_font",
+      "path": "C:/Windows/Fonts/msyh.ttc",
+      "usage": "本方案中文标注/标题/脚注的字体来源,Microsoft YaHei 微软雅黑系统字体(Windows 自带)。",
+      "usable_for": "在中文 Windows 环境渲染图面文字。",
+      "not_usable_for": "在非 Windows 环境的开源/跨平台场景直接依赖;非 Windows 环境需 fallback 到 Noto Sans CJK SC 或 Source Han Sans CN(均另属 SIL OFL/Apache 2.0 等开源许可,需分别声明)。"
+    },
+    {
+      "id": "FIG-STD-CJJ97",
+      "source_type": "standard_reference",
+      "authority_level": "national_standard",
+      "path": "https://www.mohurd.gov.cn/gongkai/zhengce/zhengcerewenhua/200303/20030314_158141.html",
+      "usage": "CJJ/T 97-2003《城市规划制图标准》,本方案图面规范化的主依据。",
+      "usable_for": "作为本方案图签栏/风玫瑰/比例尺/图例分级/字级的规范参照。",
+      "not_usable_for": "作为本方案已通过该标准审定的声明;该标准的最终解释权属于发布单位。"
+    },
+    {
+      "id": "FIG-STD-GB50137",
+      "source_type": "standard_reference",
+      "authority_level": "national_standard",
+      "path": "http://www.mohurd.gov.cn/gongkai/zhengce/zhengcerewenhua/201112/20111227_207420.html",
+      "usage": "GB 50137-2011《城市用地分类与规划建设用地标准》,本方案用地分类与配色的主依据。",
+      "usable_for": "作为用地色与分类的规范参照。",
+      "not_usable_for": "作为本方案已通过该标准审定的声明。"
     }
   ]
 }

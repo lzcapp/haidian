@@ -11,6 +11,26 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 
 # 百年京张AI创新带 · 智轨走廊城市设计提案
 
+## 〇、图面元数据规范（figure metadata spec）
+
+本方案所有总览/分区/剖面/数据图（`assets/figures/*.png` 5 张）按 CJJ/T 97-2003《城市规划制图标准》+ GB/T 20257-2017《国家基本比例尺地形图图式》+ GB 50137-2011《城市用地分类与规划建设用地标准》规范化（详见仓库根目录 `typesetting_review.md`）：
+
+- **图签栏**（右下）：图名、图号 `JZ-OV-01`、比例尺 1:8000、坐标系 CGCS2000、投影 高斯-克吕格 3° 分带 117°E、高程基准 1985 国家高程基准、设计单位 lzcapp（开源，无资质声明）、成图日期 2026-08-09、版本 v1.0、密级 公开。
+- **风玫瑰**（右上）：指北 + 冬夏主导风向频率 + 主轴倾角。
+- **比例尺条**（主图正下方居中）：线段式 `0 ━━ 500 ━━ 1000 m` + 比例注记。
+- **元数据块**（右上/左下）：坐标系 / 投影 / 中央子午线 / 成图日期 / 资料截止 / 资料来源。
+- **双图例**（右中竖排）：用地分类图例（按居住/公共产业/绿地水系/交通四大类分组）+ 规划结构图例（核心区/水系蓝廊/蓝绿楔骨架/provisional 临时边界）。
+- **规范脚注**（底部三行编号脚注）：① 412.5 m 临时边界偏移、② 公共参与与无障碍走查为推演、③ 配色符号不表政府承诺。
+- **字体**：Microsoft YaHei（系统字体，遵守其许可），见 [source:FIG-FONT-MS-YAHEI]。
+
+**现状版本**：v1.0（原图位图，无矢量底层；详见 `metrics.json` 的 `figure_layout_compliance.current_state.compliance_score_self_estimate_0_5 = 1`）。**规划版本**：v2.0 将按 `planned_state_v2` 全规范改造。
+
+
+
+**图源/规范引用**：[source:FIG-OVERVIEW-V1]（v1 原版总览图，[source:FIG-FONT-MS-YAHEI] 字体）、[source:FIG-LAYOUT-SPEC]（14 条改造指南）、[source:FIG-STD-CJJ97]（CJJ/T 97-2003 城市规划制图标准）、[source:FIG-STD-GB50137]（GB 50137-2011 城市用地分类与规划建设用地标准）。
+
+诚实声明：本图面规范为方法建议，非审定结论；正式制图须由具备城乡规划编制资质（乙级及以上）的单位审定，本方案不主张已具备相应资质。
+
 ## 方案概要（评审速览）
 
 **定位与命名**：面向"百年京张文化带、都市 AI 生活体验带、AI 融合创新带"三带合一，定稿命名为**京张智脉共生带**（Jing-Zhang AI Symbiosis Belt）——"智脉"呼应智轨走廊与 AI 创新链，"共生"强调历史、创新与公共生活的共存。视觉母题为"线性光带 + 轨道断面"（见 `visual/assets/logo_direction.svg`）。
