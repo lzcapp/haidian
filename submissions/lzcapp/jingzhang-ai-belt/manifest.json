@@ -39,7 +39,7 @@
       "role": "proposal_figure",
       "required": true,
       "language": "zh",
-      "sha256": "f576f40d4287a486868932a7cbe820567a3bcc835e5c9a8aa1d9751557dd37f4"
+      "sha256": "1bd38f59dfc3a6ed5ab9917f115e19c21d334ad84dbab6fb447712de8ac8e56c"
     },
     {
       "path": "assets/figures/mobility-bluegreen.png",
@@ -78,14 +78,14 @@
       "role": "drawing",
       "required": true,
       "language": "zh",
-      "sha256": "4cea750a088bc50e019a11d8744a671b56562097d1389a6b3a55944258cf5bbb"
+      "sha256": "e89c011921ddf1212bb4282c24925f27b6c3905bb96df93d838926b7e23102ed"
     },
     {
       "path": "drawings/a3-booklet.pdf",
       "role": "drawing",
       "required": true,
       "language": "zh",
-      "sha256": "b7b07443ddee1368711957be0bb10420c5108dbd90f434de2794a8553e720a39"
+      "sha256": "287352f145bf36cde0768419c0776a0ffbc705f8ff0e7db2137a437d4d15898c"
     },
     {
       "path": "geometry/buildings.geojson",
@@ -249,6 +249,18 @@
       "role": "reference_data",
       "required": false,
       "sha256": "2dc0c01b1f50a50186fd5e7bd7fe3cd557403b94e1d3f753115ed85757cbfd14"
+    },
+    {
+      "path": "visual/assets/renewal_projects.json",
+      "role": "reference_data",
+      "required": false,
+      "sha256": "f5a706c5b5a8d246c3326badf8ce2ada89115fb19dc680c3123cae27622658a5"
+    },
+    {
+      "path": "visual/assets/scenario_cards.json",
+      "role": "reference_data",
+      "required": false,
+      "sha256": "0b7b90ec04fc75d72605366bf4c9bd0a9dacca6aca847cadb7bf2a588065fb6a"
     },
     {
       "path": "visual/assets/scenarios.json",
