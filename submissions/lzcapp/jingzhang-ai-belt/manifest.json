@@ -185,7 +185,7 @@
       "path": "metrics.json",
       "role": "config",
       "required": true,
-      "sha256": "c35a483a6b10cf3704b9c16a02bb00bcb463e3481e44b4ff6180f8b26b35e14e"
+      "sha256": "c02b8677bee2298720638c43ca17cbd613f87ba871f82203f13491b8fe59cf05"
     },
     {
       "path": "proposal.en.md",
@@ -193,14 +193,14 @@
       "required": false,
       "language": "en",
       "translation_of": "proposal.md",
-      "sha256": "92d668ada707ff3348e2af67cf0decdb69f4fd98e62015cd9596e7fd045bdc72"
+      "sha256": "7c751c182e3f894bc3401e21a95307246add3f3a120a2079b9f8496991f343d2"
     },
     {
       "path": "proposal.md",
       "role": "narrative",
       "required": true,
       "language": "zh",
-      "sha256": "e6d2eefbb3a44108233b01dd024b3e2a11f8262c4b32a9bc11f4db5c03caa476"
+      "sha256": "dbf185244194485a51bc9a45ba711db7a66835cae959ec7b784cf5d5ef5601dd"
     },
     {
       "path": "report/copyright_statement.md",
@@ -241,7 +241,7 @@
       "path": "sources.json",
       "role": "config",
       "required": true,
-      "sha256": "369d0b5f489eec2bd8f873e09a5a90df05823e6b426af541103412af9fcef4b7"
+      "sha256": "1d1ab5985eb67cd83ab90dd899c33753db0ed88e4b990afadc5b42cf1848debc"
     },
     {
       "path": "standard_matrix.json",
@@ -313,19 +313,19 @@
       "path": "visual/assets/persona_table.json",
       "role": "reference_data",
       "required": false,
-      "sha256": "fec06289a2637236673ab09ddc519e50e980d4e589bfbde0ba69d5a1851ff885"
+      "sha256": "2eee5e5e8c52fdde94122b2d6d79f267226fc79bc3f47d366b32e9393471daad"
     },
     {
       "path": "visual/assets/renewal_projects.json",
       "role": "reference_data",
       "required": false,
-      "sha256": "930f9341850f794d7dd762b0b19919d3d9e5da579c9a705bc49d0760dde07848"
+      "sha256": "a7b0e43691dc4ca646bdfac1d6f2df27e618944625a6be6499caaac2029c4f39"
     },
     {
       "path": "visual/assets/scenario_cards.json",
       "role": "reference_data",
       "required": false,
-      "sha256": "893125757a9fd29356218045ea4d380b58851f3b37d52c9c698623c0d304057d"
+      "sha256": "1ab12a688079a69ed7222b143cbbe2fe11d6838567825365e1602204f34b03ff"
     },
     {
       "path": "visual/assets/scenarios.json",
