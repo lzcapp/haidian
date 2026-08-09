@@ -116,7 +116,7 @@ def draw_title_block(fig, fig_id, fig_name, fig_idx):
         ("图名", fig_name), ("图号", fig_id), ("比例尺", "1:8000 / A3 横向"),
         ("坐标系", "CGCS2000 / 3°GK 117°E"), ("高程基准", "1985 国家高程基准"),
         ("设计单位", "lzcapp (开源,无资质)"), ("成图日期", "2026-08-09"),
-        ("版本", "v2.0"), ("密级", "公开 / public"),
+        ("版本", "v2.4"), ("密级", "公开 / public"),
     ]
     for i, (k, v) in enumerate(fields):
         ry = y0 + h - 0.045 - i * 0.014
