@@ -108,7 +108,7 @@ def draw_three_tier_title(fig, fig_y_px, total_h_px, series, title, subtitle):
 
 def draw_title_block(fig, fig_id, fig_name, fig_idx):
     s = fig.add_axes([0, 0, 1, 1]); s.set_xlim(0, 1); s.set_ylim(0, 1); s.axis("off")
-    x0, y0, w, h = 0.72, 0.04, 0.26, 0.16
+    x0, y0, w, h = 0.72, 0.07, 0.26, 0.16
     box(s, x0, y0, w, h, r=0.005)
     text(s, x0 + 0.012, y0 + h - 0.018, "图签栏 / title block", size=10, weight="500")
     line(s, x0 + 0.012, y0 + h - 0.03, x0 + w - 0.012, y0 + h - 0.03)
