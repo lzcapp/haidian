@@ -7,6 +7,8 @@ license: "COMMUNITY-DISPLAY-ONLY"
 summary: "基于 provisional boundary 和结构化自检要求生成的 formal AI 城市设计方案包；保留精度警示和复算要求，但组织方数据缺口不阻断内容评分。"
 tracks: ["ai-traffic-walkability", "enterprise-services-ecosystem", "civic-agent-governance"]
 scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safety-operations-review"]
+proposal_format_version: "2"
+bilingual_contract_version: "1"
 ---
 
 # 百年京张AI创新带 · 智轨走廊城市设计提案
@@ -27,7 +29,12 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 
 
 
-**图源/规范引用**：[source:FIG-OVERVIEW-V1]（v1 原版总览图，[source:FIG-FONT-MS-YAHEI] 字体）、[source:FIG-LAYOUT-SPEC]（14 条改造指南）、[source:FIG-STD-CJJ97]（CJJ/T 97-2003 城市规划制图标准）、[source:FIG-STD-GB50137]（GB 50137-2011 城市用地分类与规划建设用地标准）。
+**图源/规范引用**：
+- [source:FIG-OVERVIEW-V1]：v1 原版总览图；
+- [source:FIG-FONT-MS-YAHEI]：字体授权；
+- [source:FIG-LAYOUT-SPEC]：14 条改造指南；
+- [source:FIG-STD-CJJ97]：CJJ/T 97-2003 城市规划制图标准；
+- [source:FIG-STD-GB50137]：GB 50137-2011 城市用地分类与规划建设用地标准。
 
 诚实声明：本图面规范为方法建议，非审定结论；正式制图须由具备城乡规划编制资质（乙级及以上）的单位审定，本方案不主张已具备相应资质。
 
@@ -53,7 +60,7 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 | 产业支撑度 industry_support | 全栈自主体系、要素保障、测试与场景开放机制 | 案例对标、生态图谱 |
 | 场景可感知度 scenario_perceptibility | 10 张九字段场景卡（服务对象/空间/运营/最小数据/隐私/人工复核/非AI替代/申诉/停止条件）+ SC-01~03 产业测试验证场景 | `visual/assets/scenario_cards.json` |
 | 空间明确性 spatial_clarity | 场景/地标/更新项目挂接到具体图层 | GeoJSON 图层与 metrics |
-| 可转化性 transferability | 结构化数据 + 合规矩阵 + 成本五本账(unknown) + 分期证据闸门可继续深化 | compliance_matrix.json、renewal_projects.json |
+| 可转化性 transferability | 结构化数据 + 合规矩阵 + 成本五本账（金额待核定）+ 分期证据闸门可继续深化 | compliance_matrix.json、renewal_projects.json |
 | 表达完整性 expression_completeness | 文本/图/表/场景卡/HTML/Logo 完整成果 | report/*.html、本提案 |
 | 公开合规性 public_compliance | 无涉密、无伪精确、版权清单、412.5m 临时边界偏移声明(boundary_offset_note)、诚实标注未真实走查 | copyright_statement.md、metrics.json |
 | 国际传播力 international_communication | 中英双语提案与传播文案 | proposal.en.md、文化叙事 |
@@ -63,7 +70,7 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 
 本 formal 方案以北京市规划和自然资源委员会海淀分局发布的《百年京张AI创新带城市设计国际方案征集资格预审公告》为第一依据，并以 `brief/site-package/` 中经维护者登记的临时粗略边界、重点区域、枚举、指标和来源清单为机器可读依据。AI agent 在生成方案前必须读取 `design_brief.json`、`allowed_design_space.json`、`sources.json`、`enums/`、`ranges/`、`schemas/`、`data/source_registry.json` 和 `data/processed/agent_fact_pack.md`，并用 `project_scope_summary.csv`、`agent_task_requirements.csv`、`source_use_matrix.csv`、`missing_data_checklist.csv` 建立任务、范围、资料用途和缺口清单。所有设计判断都要拆分为可追溯来源、可复算指标、可校验图层和可人工复核假设。公告要求方案达到控制性详细规划的城市设计深度和规划综合实施方案的城市设计深度，因此文本叙述不能替代 GeoJSON、指标表、A3 文册、A0 展板和 HTML 电子展示成果。
 
-本节证据链引用 [source:OFFICIAL-ANNOUNCEMENT]、[source:AGENT-TASKBOOK]、[source:SITE-PACKAGE]、[source:SOURCE-REGISTRY]、[source:PROCESSED-FACT-PACK]、[source:BOUNDARY-SOURCE]、[source:KEY-AREA-SOURCE]、[standard:PROJECT-OFFICIAL-ANNOUNCEMENT]、[standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK]、[standard:MOHURD-URBAN-DESIGN-MEASURES]、[standard:MOHURD-CONTROL-DETAILED-PLANNING]、[standard:MNR-LAND-USE-CLASSIFICATION-GUIDE]、[standard:MOHURD-ARCH-DESIGN-DEPTH-2016] 和 [depth:existing_conditions_diagnosis]，用于说明方案不是独立愿景文本，而是从公告、面向智能体任务书、标准、边界、处理资料包和资料清单出发组织成果。
+本节以 [standard:MOHURD-ARCH-DESIGN-DEPTH-2016] 为成果深度基准，并以 [depth:existing_conditions_diagnosis] 校核现状认知；其余依据（征集公告、面向智能体任务书、资料包、资料登记与重点区来源、相关城乡规划标准）已在正文各节与【参考资料】统一引用索引中逐项给出，方案因此是从权威依据出发组织成果，而非独立愿景文本。
 
 资料登记表的使用边界如下：
 
@@ -71,7 +78,8 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 - 当前登记摘要：formal 可用资料 5 条，背景资料 0 条，provisional-only 资料 1 条。
 - agent 不得把 background_only 或 provisional_only 资料升级为 official boundary、法定控规、正式评分依据或政府实施承诺。
 
-`data/processed/agent_fact_pack.md` 是本方案的阅读导航层，不是新的权威来源。[source:PROCESSED-FACT-PACK] 只帮助 agent 把三层范围、三处重点区、公告任务、agent.1-agent.6、资料可用性和缺资料事项组织成可读方案；所有事实判断仍回到 [source:OFFICIAL-ANNOUNCEMENT]、[source:AGENT-TASKBOOK]、[source:SOURCE-REGISTRY]、[source:BOUNDARY-SOURCE] 与 [source:KEY-AREA-SOURCE]。
+`data/processed/agent_fact_pack.md` 是本方案的阅读导航层，不是新的权威来源。[source:PROCESSED-FACT-PACK] 只帮助 agent 把三层范围、三处重点区、公告任务、agent.1-agent.6、资料可用性和缺资料事项组织成可读方案；
+所有事实判断仍回到 [source:BOUNDARY-SOURCE] 与 [source:KEY-AREA-SOURCE] 等边界与重点区来源（见【设计依据与资料清单】与【参考资料】统一引用索引）。
 
 ![资料证据链与提交包关系图](assets/figures/site-overview.png)
 
@@ -79,13 +87,16 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 
 本次脚手架生成的可评分状态为：**临时边界，保留精度警示并待正式数据发布后复算；不阻断内容评分**。因此，正文中的空间结构、场景、项目和指标均按“可讨论、可复核、可替换官方边界后重算”的原则写入；当官方边界和重点区 polygon 更新后，agent 必须重新运行脚手架、自检和图纸/HTML生成，不能只替换单个文件。
 
-边界和重点区域的可读解释对应 [data:geometry/site_boundary.geojson#SITE-001]、[data:geometry/key_areas.geojson#PROV-KEY-001] 和 [metric:site_area_sqm]、[metric:key_area_count]。这意味着读者可以从正文回到 GeoJSON 查看边界来源、从 metrics 查看面积复算结果、从 sources 查看资料来源，而不是只相信一段文字判断。
+边界和重点区域的可读解释对应 [data:geometry/site_boundary.geojson#SITE-001] 与 [data:geometry/key_areas.geojson#PROV-KEY-001]。
+面积与重点区数量见 [metric:site_area_sqm] 与 [metric:key_area_count]。这意味着读者可以从正文回到 GeoJSON 查看边界来源、从 metrics 查看面积复算结果、从 sources 查看资料来源，而不是只相信一段文字判断。
 
 ## 三层范围工作框架
 
 方案按照公告确定的三个层次组织工作：统筹研究范围关注 43.6 平方公里的AI产业生态、战略定位、创新链和未来城市形态；总体设计范围关注 11.4 平方公里京张遗址公园周边 1-2 公里城市地区和产业区，要求形成城市更新总体框架、产业空间布局、交通市政支撑和城市风貌控制；重点区域范围关注 368.4 公顷三处详细设计地区，要求明确功能业态、建筑规模、拆改留分类、公共空间连通和交通组织。三层范围在 `compliance_matrix.json` 中逐条映射，保证公告 1.3、1.4、1.5 与 agent.1-agent.6 的必选任务都有章节、图层、指标、图纸和 HTML 证据。
 
-三层工作框架的深度项由 [depth:three_level_scope_framework] 和 [depth:overall_spatial_structure] 约束，空间证据以 [data:geometry/site_boundary.geojson#SITE-001] 与 [data:geometry/key_areas.geojson#PROV-KEY-001] 为准，任务依据以 [standard:PROJECT-OFFICIAL-ANNOUNCEMENT] 为准，范围索引以 [source:PROCESSED-FACT-PACK] 中 `project_scope_summary.csv` 的三层范围表为导航。
+三层工作框架的深度项由 [depth:three_level_scope_framework] 与 [depth:overall_spatial_structure] 约束。
+空间证据以 [data:geometry/site_boundary.geojson#SITE-001] 与 [data:geometry/key_areas.geojson#PROV-KEY-001] 为准。
+任务依据以 [standard:PROJECT-OFFICIAL-ANNOUNCEMENT] 为准，范围索引以 [source:PROCESSED-FACT-PACK] 中 `project_scope_summary.csv` 的三层范围表为导航。
 
 ![三层范围与空间工作框架图](assets/figures/land-use-structure.png)
 
@@ -103,7 +114,8 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 
 统筹研究范围的核心任务是构建世界级 AI 创新生态体系。方案应梳理海淀高校院所、头部企业、算力算法数据要素、孵化平台、上市企业、独角兽和科技服务资源，提出AI创新链、产业链、人才链和城市服务链的空间协同框架。命名方案和 logo 设计应服务于“百年京张文化带、都市AI生活体验带、AI融合创新带”的整体辨识度，不能只停留在口号，应说明与产业生态、公共空间和文化资源的关联。面向智能体任务书还要求回应“五大功能”和“三区两翼”协同，形成可继续深化的命名系统、视觉识别、总体空间结构图、场景开放和运营机制；本节必须用 [source:AGENT-TASKBOOK] 与 [standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK] 标注这些要求来自 agent 开源征集任务，而不是法定规划控制。
 
-统筹研究并不新增伪精确红线；它通过 [standard:MOHURD-URBAN-DESIGN-MEASURES] 要求的城市风貌、公共空间和建筑布局统筹，回接 [data:geometry/land_use.geojson#LU-001]、[data:geometry/public_space.geojson#PUBLIC-001] 与 [depth:overall_spatial_structure]，说明产业策略最终要落到可见、可复核的空间结构。
+统筹研究并不新增伪精确红线；它通过 [standard:MOHURD-URBAN-DESIGN-MEASURES] 要求的城市风貌、公共空间和建筑布局统筹，
+回接 [data:geometry/land_use.geojson#LU-001]、[data:geometry/public_space.geojson#PUBLIC-001] 与 [depth:overall_spatial_structure]，说明产业策略最终要落到可见、可复核的空间结构。
 
 未来城市形态研究应回答人工智能如何改变工作、生活、社交、学习、交通和公共服务。方案应把AI交通系统、连续绿色空间、创新服务设施和国际化生活工作氛围落实为可定位的功能区、节点、廊道和场景，而不是泛泛描述技术愿景。agent 应把产业战略指标、AI创新指数、人才密度、空间供给类型和AI+垂直应用重点区域写入指标体系，并标明哪些是官方、哪些是设计建议、哪些仍待正式数据校准。若提出全球AI创新活动、开发者社区、开放场景或朝圣路线，应写为“概念建议/参考方案/可供专业团队深化研究”，不得写成已经确定的政府活动或实施安排。
 
@@ -111,7 +123,9 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 
 总体设计范围要求达到控制性详细规划的城市设计深度。方案必须提出城市更新总体空间结构、低效空间识别、更新项目清单、实施政策建议、产业功能比例、空间组织模式、建筑总规模和综合承载能力评估。`geometry/land_use.geojson` 应完整覆盖设计边界且无重叠，`geometry/buildings.geojson` 应表达更新建筑基底或保留建筑基底，`geometry/roads.geojson` 应表达微循环、慢行和轨道接驳关系，`metrics.json` 应复算核心面积、比例和图层数量。
 
-本节按照 [standard:MOHURD-CONTROL-DETAILED-PLANNING] 把控规深度内容拆成可审查对象：[data:geometry/land_use.geojson#LU-001] 表达用地结构，[data:geometry/buildings.geojson#BLDG-001] 表达建筑基底，[data:geometry/roads.geojson#ROAD-001] 表达交通组织，[metric:building_footprint_area_sqm] 用于复核建筑基底面积，[depth:land_use_layout] 与 [depth:development_intensity_controls] 约束成果深度。
+本节按照 [standard:MOHURD-CONTROL-DETAILED-PLANNING] 把控规深度内容拆成可审查对象。
+用地结构由 [data:geometry/land_use.geojson#LU-001] 表达，建筑基底由 [data:geometry/buildings.geojson#BLDG-001] 表达，交通组织由 [data:geometry/roads.geojson#ROAD-001] 表达。
+建筑基底面积以 [metric:building_footprint_area_sqm] 复核，成果深度由 [depth:land_use_layout] 与 [depth:development_intensity_controls] 约束。
 
 总体设计还必须支撑交通、轨道、市政和配套设施。方案应围绕轨道站点一体化、道路微循环、非机动车停放、停车供给、创新服务平台、人才生活服务、新型基础设施、分布式能源和端侧算力提出空间布局和实施路径。涉及建筑高度、开发强度、道路红线、退线和设施标准的内容，若尚无官方控制条件，应写为“待正式控规条件确认”，不得以 agent 推测值冒充审定指标。
 
@@ -119,7 +133,8 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 
 重点区域详细设计是必选项。众智园AI自主创新加速区应围绕国家人工智能平台、全栈自主创新、标准制定、安全治理、产业展示、对外交通、清河文化、低碳绿色创新交往环境和绿色空间AI场景提出详细方案。北京AI原点社区应围绕近校创新、成果孵化转化、人才特区、开源体系、品牌活动、建筑拆改留、成果展示发布、居住生活配套、校区园区慢行联系和轨道站点一体化提出详细方案。大钟寺AI产业聚集区应围绕领军企业、智能体、智能终端、内容消费、数据要素、数字资产、商业服务、规划绿地复合利用、大钟寺站一体化和路口四象限步行连通提出详细方案。
 
-三处重点区域详细设计必须引用 [data:geometry/key_areas.geojson#PROV-KEY-001]、[data:geometry/key_areas.geojson#PROV-KEY-002]、[data:geometry/key_areas.geojson#PROV-KEY-003]，并由 [depth:three_key_area_detailed_design] 检查是否达到规划综合实施方案深度。若只描述“打造示范区”而没有功能、建筑、交通、公共空间和实施项目证据，应被视为未完成。
+三处重点区域详细设计必须引用 [data:geometry/key_areas.geojson#PROV-KEY-001]、[data:geometry/key_areas.geojson#PROV-KEY-002] 与 [data:geometry/key_areas.geojson#PROV-KEY-003]。
+并由 [depth:three_key_area_detailed_design] 检查是否达到规划综合实施方案深度。若只描述“打造示范区”而没有功能、建筑、交通、公共空间和实施项目证据，应被视为未完成。
 
 ![三处重点区域索引与设计任务图](assets/figures/key-areas.png)
 
@@ -135,7 +150,9 @@ scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safe
 
 方案应建立面向AI人才和企业的空间需求画像，覆盖研发办公、开源协作、成果发布、企业服务、人才居住、社交学习、消费生活、运动休闲和国际交往。AI+场景应围绕公告提出的交通、服务、消费、医疗、教育、法律、生活服务等方向，形成产业发展场景和AI赋能城市功能场景。每个场景应说明服务对象、空间位置、数据来源、隐私边界、人工复核机制和运营主体。
 
-AI 场景必须落到空间和治理边界：公共空间场景引用 [data:geometry/public_space.geojson#PUBLIC-001]，慢行与交通场景引用 [data:geometry/roads.geojson#ROAD-001]，开放空间场景引用 [data:geometry/green_space.geojson#GREEN-001] 和 [metric:public_space_ratio]、[metric:green_ratio]。这些引用让评审者知道场景不是口号，而是位于具体图层和指标中的设计对象。面向智能体任务书要求不少于10张AI场景卡、不少于3个产业测试验证场景和不少于5类用户画像；脚手架只给出结构，正式参赛者必须把场景卡、画像表、隐私边界、人工复核和运营主体写入正文、HTML、A3/A0 和合规矩阵。
+AI 场景必须落到空间和治理边界：公共空间场景引用 [data:geometry/public_space.geojson#PUBLIC-001]，慢行与交通场景引用 [data:geometry/roads.geojson#ROAD-001]。
+开放空间场景引用 [data:geometry/green_space.geojson#GREEN-001]，并由 [metric:public_space_ratio] 与 [metric:green_ratio] 校核。
+这些引用让评审者知道场景不是口号，而是位于具体图层和指标中的设计对象。面向智能体任务书要求不少于10张AI场景卡、不少于3个产业测试验证场景和不少于5类用户画像；脚手架只给出结构，正式参赛者必须把场景卡、画像表、隐私边界、人工复核和运营主体写入正文、HTML、A3/A0 和合规矩阵。
 
 | 用户画像 | 典型需求 | 空间响应 | 自检边界 |
 | --- | --- | --- | --- |
@@ -187,13 +204,15 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 
 用地和建筑的主要证据是 [data:geometry/land_use.geojson#LU-001]、[data:geometry/buildings.geojson#BLDG-001] 和 [metric:building_footprint_area_sqm]。
 
-建筑规模和强度指标必须与 `metrics.json` 和图层一致。若总建筑规模、容积率、建筑高度、建筑密度、绿地率、退线和建筑控制线缺少官方条件，应在指标体系中列为 unknown 或 pending_control，不得用固定数值制造精确感。A3 文册应给出更新项目清单和指标复核表，A0 展板应把关键空间结构和重点片区表达清楚，HTML 页面应提供指标和图层联动查看。
+建筑规模和强度指标必须与 `metrics.json` 和图层一致。若总建筑规模、容积率、建筑高度、建筑密度、绿地率、退线和建筑控制线缺少官方条件，应在指标体系中列为待核定或待控规条件，不得用固定数值制造精确感。A3 文册应给出更新项目清单和指标复核表，A0 展板应把关键空间结构和重点片区表达清楚，HTML 页面应提供指标和图层联动查看。
 
 ## 交通、轨道、市政与公共服务设施
 
 交通方案应回应公告对轨道站点一体化、道路微循环、慢行断点、对外交通、停车、非机动车停放和绿色交通系统的要求。重点应覆盖北五环、京张遗址公园跨环路节点、五道口、清华东路西口、大钟寺站及重点企业周边交通联系。道路和慢行图层应保持在提交边界内，并与公共空间、绿地、产业节点和重点片区相互校核；若提交边界为 provisional，交通结论也只能作为临时设计讨论。
 
-交通和市政专业深度分别由 [depth:traffic_rail_slow_parking] 与 [depth:municipal_new_infrastructure] 约束；图层证据引用 [data:geometry/roads.geojson#ROAD-001]、[data:geometry/public_space.geojson#PUBLIC-001] 和 [data:geometry/constraints.geojson#CONSTRAINTS]。当道路红线、管线、消防和市政条件缺失时，应通过 assumptions 说明待补，而不是把策略写成审定条件。
+交通和市政专业深度分别由 [depth:traffic_rail_slow_parking] 与 [depth:municipal_new_infrastructure] 约束；
+图层证据引用 [data:geometry/roads.geojson#ROAD-001]、[data:geometry/public_space.geojson#PUBLIC-001] 与 [data:geometry/constraints.geojson#CONSTRAINTS]。
+当道路红线、管线、消防和市政条件缺失时，应通过 assumptions 说明待补，而不是把策略写成审定条件。
 
 ![交通慢行与蓝绿公共空间复合系统图](assets/figures/mobility-bluegreen.png)
 
@@ -203,7 +222,9 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 
 蓝绿空间方案应以京张遗址公园活力带为骨架，统筹清河、小月河、周边高校、企业、社区出行需求，提出南北贯通、东西连通的步道、骑行道和绿色空间体系。方案应识别慢行断点、上跨环路节点、公园南端和北端景观节点，提出停车、体育、创新交往、科技测试、应用展示和公共服务复合利用策略。
 
-蓝绿公共空间由 [depth:blue_green_public_space] 校核，核心证据为 [data:geometry/green_space.geojson#GREEN-001]、[data:geometry/public_space.geojson#PUBLIC-001]、[metric:green_ratio] 和 [metric:public_space_ratio]。城市设计管理办法要求统筹景观风貌、公共空间和建筑控制，因此本节同时引用 [standard:MOHURD-URBAN-DESIGN-MEASURES]。
+蓝绿公共空间由 [depth:blue_green_public_space] 校核，核心证据为 [data:geometry/green_space.geojson#GREEN-001] 与 [data:geometry/public_space.geojson#PUBLIC-001]。
+比例指标以 [metric:green_ratio] 与 [metric:public_space_ratio] 表达。
+城市设计管理办法要求统筹景观风貌、公共空间和建筑控制，因此本节同时引用 [standard:MOHURD-URBAN-DESIGN-MEASURES]。
 
 城市风貌方案应融合京张铁路历史文化、中关村创新文化和AI创新文化，利用清华园火车站、北影等文化资源，提出城市基调、建筑风貌、屋顶形态、体量、界面和公共艺术引导。agent 还应提出导视标识、文化符号、国际传播叙事、AI朝圣地标、贡献墙或荣誉展示体系，但所有品牌、字体、图像、肖像和企业标识都必须有清权来源。风貌控制应分清官方管控、设计建议和待确认条件，严禁在没有文保或控规依据时给出伪精确控制线。
 
@@ -224,11 +245,11 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 
 上表为项目定位摘要；**完整 Feasibility 字段**（主体类型、近/中/长期阶段里程碑与交付物、成本类别与概念估算、成效阈值与目标值）见结构化数据 `visual/assets/renewal_projects.json`（JZ-01—JZ-06，含 `geometry_area_note_zh` 面积拓扑说明）。所有金额为概念阶段粗估区间，非概算/预算，落地须经投资测算核定，不与政府组织承诺混淆。
 
-### 成本五本账（金额 unknown）
+### 成本五本账（金额待核定）
 
 
 
-更新项目成本按五本账分别登记（人员 / 空间 / 设备 / 数据 / 公共价值），所有金额在概念阶段为 unknown，非概算/预算，落地须经投资测算核定；不与政府组织承诺混淆。五本账与 `metrics.json` 的 unknown 管控指标一致，防止被读成正式财务结论。
+更新项目成本按五本账分别登记（人员 / 空间 / 设备 / 数据 / 公共价值），所有金额在概念阶段为待核定，非概算/预算，落地须经投资测算核定；不与政府组织承诺混淆。五本账与 `metrics.json` 的待核定管控指标一致，防止被读成正式财务结论。
 
 
 
@@ -244,11 +265,26 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 
 ## 指标体系、面积复算与合规矩阵
 
-指标体系至少应包含总体设计范围面积、重点区域面积、绿地与公共空间比例、建筑基底、更新项目数量、AI场景节点、慢行连通指标、产业空间指标、人才服务指标和自检状态。所有 known 指标必须能从 GeoJSON 或可信来源复算；unknown 指标必须给出原因和正式提交前置条件。`scripts/spatial_review.py` 和 `scripts/visual_review.py` 的结果是 formal 自检的重要证据。
+指标体系至少应包含总体设计范围面积、重点区域面积、绿地与公共空间比例、建筑基底、更新项目数量、AI场景节点、慢行连通指标、产业空间指标、人才服务指标和自检状态。所有已知（known）指标必须能从 GeoJSON 或可信来源复算；待核定指标（即 `metrics.json` 中 `status:"unknown"` 的指标）必须给出原因和正式提交前置条件。`scripts/spatial_review.py` 和 `scripts/visual_review.py` 的结果是 formal 自检的重要证据。
 
-指标复算深度由 [depth:metrics_recalculation] 管理。本方案正文显式引用全部 ten 个 known 指标：[metric:site_area_sqm]、[metric:green_space_area_sqm]、[metric:public_space_area_sqm]、[metric:building_footprint_area_sqm]、[metric:green_ratio]、[metric:public_space_ratio]、[metric:building_density]、[metric:key_area_count]、[metric:key_area_total_area_sqm]、[metric:phasing_area_sqm]，并说明这些值来自 [data:geometry/site_boundary.geojson#SITE-001]、[data:geometry/key_areas.geojson#PROV-KEY-001]、[data:geometry/buildings.geojson#BLDG-001]、[data:geometry/green_space.geojson#GREEN-001] 和 [data:geometry/public_space.geojson#PUBLIC-001]。
+指标复算深度由 [depth:metrics_recalculation] 管理；全部 known 指标已在下方【指标速览】逐项引用，并标注复算来源，精度受 provisional boundary 限制，待官方 redline 发布后整体重算。
 
-指标速览（均由提交几何在 EPSG:4548 投影面直接复算；精度受 provisional boundary 限制，待官方 redline 发布后整体重算）：用地面积 [metric:site_area_sqm] = 1141.3 万㎡；蓝绿空间面积 [metric:green_space_area_sqm] = 211.9 万㎡；公共空间面积 [metric:public_space_area_sqm] = 76.2 万㎡；建筑基底面积 [metric:building_footprint_area_sqm] = 310.6 万㎡；绿地率 [metric:green_ratio] = 18.6%；公共空间占比 [metric:public_space_ratio] = 6.7%；建筑密度 [metric:building_density] = 27.2%；重点区域数量 [metric:key_area_count] = 3 处；重点区域总面积 [metric:key_area_total_area_sqm] = 369.3 万㎡；分期总面积 [metric:phasing_area_sqm] = 1141.3 万㎡。上述空间指标可由 GeoJSON 直接复算，属于“可由提交几何复算”的第一类指标；容积率、建筑高度、总建筑面积在 `metrics.json` 中列为 unknown，待官方控规与任务书附件支撑。
+指标速览（均由提交几何在 EPSG:4548 投影面直接复算；精度受 provisional boundary 限制，待官方 redline 发布后整体重算）：
+
+| 指标 | 复算值 | 来源图层 |
+| --- | --- | --- |
+| [metric:site_area_sqm] 用地面积 | 1141.3 万㎡ | [data:geometry/site_boundary.geojson#SITE-001] |
+| [metric:green_space_area_sqm] 蓝绿空间面积 | 211.9 万㎡ | [data:geometry/green_space.geojson#GREEN-001] |
+| [metric:public_space_area_sqm] 公共空间面积 | 76.2 万㎡ | [data:geometry/public_space.geojson#PUBLIC-001] |
+| [metric:building_footprint_area_sqm] 建筑基底面积 | 310.6 万㎡ | [data:geometry/buildings.geojson#BLDG-001] |
+| [metric:green_ratio] 绿地率 | 18.6% | [data:geometry/green_space.geojson#GREEN-001] |
+| [metric:public_space_ratio] 公共空间占比 | 6.7% | [data:geometry/public_space.geojson#PUBLIC-001] |
+| [metric:building_density] 建筑密度 | 27.2% | [data:geometry/buildings.geojson#BLDG-001] |
+| [metric:key_area_count] 重点区域数量 | 3 处 | [data:geometry/key_areas.geojson#PROV-KEY-001] |
+| [metric:key_area_total_area_sqm] 重点区域总面积 | 369.3 万㎡ | [data:geometry/key_areas.geojson#PROV-KEY-001] |
+| [metric:phasing_area_sqm] 分期总面积 | 1141.3 万㎡ | [data:geometry/site_boundary.geojson#SITE-001] |
+
+上述空间指标可由 GeoJSON 直接复算，属于“可由提交几何复算”的第一类指标；容积率、建筑高度、总建筑面积在 `metrics.json` 中列为待核定，待官方控规与任务书附件支撑。
 
 **面积拓扑差异说明（约 16.9 ㎡）**：由提交几何复算的 `site_area_sqm` = 11,412,825.386 ㎡ 与 `phasing_area_sqm` = 11,412,842.304 ㎡ 相差 **16.918 ㎡（约 16.9 ㎡）**，源于 provisional 边界分区时的浮点舍入与拓扑容差（两图层外边界未完全对齐），**不代表真实面积误差**；该差异已在 `metrics.json` 的 `geometry_topology_note` 与 `visual/assets/renewal_projects.json` 的 `geometry_area_note_zh` 中登记。所有由提交几何复算的面积与比例指标精度仍受 provisional boundary 限制，官方 redline 发布后须整体重算（[metric:site_area_sqm]、[metric:phasing_area_sqm]）。
 
@@ -266,7 +302,9 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 
 方案主文件可使用中文或英文，并应通过 `proposal.en.md` 或 `proposal.zh.md` 提供完整对照译文；缺少译文只产生 non-blocking warning，不阻断投稿、合并或内容审稿。A3/A0、HTML 和含文字图件也应提供对应语言副本，并优先使用 `docs/terminology-glossary.md` 的赛事推荐译法。所有图片、图纸、图标、数据和代码资产必须在 `sources.json` 或 `report/copyright_statement.md` 中说明来源、许可和授权状态。HTML 页面不得加载远程脚本、远程地图瓦片、远程字体、iframe、表单或外部 API，不得跟踪评审者行为。
 
-风险和缺资料清单由 [depth:risk_missing_data] 管理，并与 [data:geometry/constraints.geojson#CONSTRAINTS]、[source:SITE-PACKAGE]、[source:PROCESSED-FACT-PACK] 和 [standard:MOHURD-CONTROL-DETAILED-PLANNING] 相互校核。`missing_data_checklist.csv` 中列出的 official boundary、key area、控规、道路、地块、建筑、市政、文保和公共服务缺口，必须进入 `assumptions.json`、自检和正文风险章节。任何缺少官方控规、道路红线、权属、市政、消防或文保条件的结论，都必须降级为待确认事项。
+风险和缺资料清单由 [depth:risk_missing_data] 管理，并与 [data:geometry/constraints.geojson#CONSTRAINTS] 相互校核。
+资料包与处理资料包以 [source:SITE-PACKAGE] 与 [source:PROCESSED-FACT-PACK] 校验，成果深度以 [standard:MOHURD-CONTROL-DETAILED-PLANNING] 对照。
+`missing_data_checklist.csv` 中列出的 official boundary、key area、控规、道路、地块、建筑、市政、文保和公共服务缺口，必须进入 `assumptions.json`、自检和正文风险章节。任何缺少官方控规、道路红线、权属、市政、消防或文保条件的结论，都必须降级为待确认事项。
 
 本方案不声称官方批准、审定控规、最终土地权属、最终建设规模或保证实施。AI agent 对事实、来源、版权、空间数据、指标和表达负责；维护者和专业评审可依据自检结果、空间复核和合规矩阵要求返修或拒绝。
 
@@ -415,4 +453,13 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 - data/processed/agent_task_requirements.csv
 - data/processed/source_use_matrix.csv
 - data/processed/missing_data_checklist.csv
-- 机器可读引用索引：[source:OFFICIAL-ANNOUNCEMENT]、[source:AGENT-TASKBOOK]、[source:SITE-PACKAGE]、[source:SOURCE-REGISTRY]、[source:PROCESSED-FACT-PACK]、[standard:PROJECT-OFFICIAL-ANNOUNCEMENT]、[standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK]、[depth:metrics_recalculation]、[data:geometry/site_boundary.geojson#SITE-001]、[metric:site_area_sqm]
+- 机器可读引用索引（正文各节已逐项给出，以下为按类型汇总）：
+
+| 类型 | 引用标识 |
+| --- | --- |
+| 来源 | [source:OFFICIAL-ANNOUNCEMENT]、[source:AGENT-TASKBOOK]、[source:SITE-PACKAGE] |
+| 来源（续） | [source:SOURCE-REGISTRY]、[source:PROCESSED-FACT-PACK] |
+| 标准 | [standard:PROJECT-OFFICIAL-ANNOUNCEMENT]、[standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK] |
+| 深度项 | [depth:metrics_recalculation] |
+| 数据 | [data:geometry/site_boundary.geojson#SITE-001] |
+| 指标 | [metric:site_area_sqm] |

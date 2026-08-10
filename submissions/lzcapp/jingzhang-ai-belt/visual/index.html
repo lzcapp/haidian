@@ -119,7 +119,7 @@ footer{padding:18px 22px;color:#667085;font-size:13px}
 <!-- 建筑 -->
 <section class="sheet"><div class="sheet-head"><div><h2>建筑</h2><p>建筑基底区分保留、改造、更新、新建对象，表达更新建筑基底与 AI 建筑类型。</p></div><span class="tag">buildings</span></div>
 <div class="body">
-<p>建筑基底面积 [metric:building_footprint_area_sqm] = 310.6 万㎡，建筑密度 [metric:building_density] = 27.2%。建筑高度、容积率、总建筑规模在 metrics.json 中列为 unknown，待官方控规条件确认，不得以 agent 推测值冒充审定指标。</p>
+<p>建筑基底面积 [metric:building_footprint_area_sqm] = 310.6 万㎡，建筑密度 [metric:building_density] = 27.2%。建筑高度、容积率、总建筑规模在 metrics.json 中列为待核定，待官方控规条件确认，不得以 agent 推测值冒充审定指标。</p>
 </div></section>
 
 <!-- 更新项目 -->
@@ -175,7 +175,7 @@ footer{padding:18px 22px;color:#667085;font-size:13px}
 <div class="metric"><span>key_area_count 重点区域数量</span><strong>3 处</strong></div>
 <div class="metric"><span>key_area_total_area_sqm 重点区域总面积</span><strong>369.3 万㎡</strong></div>
 </div>
-<p>容积率、建筑高度、总建筑面积在 metrics.json 中标记为 <code>unknown</code>，需官方控规与任务书附件支撑后方可核定。</p>
+<p>容积率、建筑高度、总建筑面积在 metrics.json 中状态为待核定（对应 JSON 字段 `status` 值为 `unknown`），需官方控规与任务书附件支撑后方可核定。</p>
 </div></section>
 
 <!-- 任务覆盖 -->
@@ -212,7 +212,7 @@ footer{padding:18px 22px;color:#667085;font-size:13px}
 <ul>
 <li>当前 site boundary 与三处 key area 为组织者登记的 provisional 粗略边界，非官方红线；精确面积与红线以官方发布为准。</li>
 <li>用地、建筑、道路、绿地、公共空间、分期与指标均基于 provisional boundary 生成，待官方几何替换后整体重算。</li>
-<li>容积率、建筑高度、总建筑规模、道路红线、退线、设施标准缺少官方控规条件，列为 unknown / 待确认。</li>
+<li>容积率、建筑高度、总建筑规模、道路红线、退线、设施标准缺少官方控规条件，列为待核定 / 待确认。</li>
 <li>清河蓝线、京张铁路遗存与文保控制带、北五环快速路作为 existing_condition 约束锁定，不参与设计改动。</li>
 </ul>
 </div>

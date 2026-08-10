@@ -51,12 +51,18 @@
         {
           "metric_zh": "慢行连通率",
           "target_zh": "≥ 95%",
-          "by_when_zh": "中期(3 年内)"
+          "by_when_zh": "中期(3 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         },
         {
           "metric_zh": "识别断点清零",
           "target_zh": "高优先断点 100% 缝合",
-          "by_when_zh": "近期(1 年内)"
+          "by_when_zh": "近期(1 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         }
       ],
       "dependency_zh": "道路红线、交通组织",
@@ -109,12 +115,18 @@
         {
           "metric_zh": "滨水可达段比例",
           "target_zh": "≥ 80%",
-          "by_when_zh": "中期(3 年内)"
+          "by_when_zh": "中期(3 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         },
         {
           "metric_zh": "活动承载/日",
           "target_zh": "≥ 5000 人·次（试点段）",
-          "by_when_zh": "近期(1 年内）"
+          "by_when_zh": "近期(1 年内）",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         }
       ],
       "dependency_zh": "蓝线、防洪",
@@ -163,12 +175,18 @@
         {
           "metric_zh": "年成果转化数",
           "target_zh": "≥ 30 项/年（试点）",
-          "by_when_zh": "中期(3 年内)"
+          "by_when_zh": "中期(3 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         },
         {
           "metric_zh": "入驻初创/服务数",
           "target_zh": "≥ 50 家（试点段）",
-          "by_when_zh": "中期(3 年内)"
+          "by_when_zh": "中期(3 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         }
       ],
       "dependency_zh": "权属、首层业态",
@@ -221,12 +239,18 @@
         {
           "metric_zh": "步行连通度",
           "target_zh": "四象限 100% 连通",
-          "by_when_zh": "中期(3 年内)"
+          "by_when_zh": "中期(3 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         },
         {
           "metric_zh": "过街等待时间",
           "target_zh": "下降 ≥ 30%",
-          "by_when_zh": "中期(3 年内)"
+          "by_when_zh": "中期(3 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         }
       ],
       "dependency_zh": "轨道站点、市政管线",
@@ -279,12 +303,18 @@
         {
           "metric_zh": "重点片区服务覆盖率",
           "target_zh": "≥ 70%",
-          "by_when_zh": "中期(3 年内)"
+          "by_when_zh": "中期(3 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         },
         {
           "metric_zh": "单位算力碳效",
           "target_zh": "较基线下降 ≥ 20%",
-          "by_when_zh": "中期(3 年内)"
+          "by_when_zh": "中期(3 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         }
       ],
       "dependency_zh": "能源、算力",
@@ -337,12 +367,18 @@
         {
           "metric_zh": "线下参与人次",
           "target_zh": "≥ 5 万人/届",
-          "by_when_zh": "首年(1 年内)"
+          "by_when_zh": "首年(1 年内)",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         },
         {
           "metric_zh": "国际传播曝光",
           "target_zh": "≥ 1000 万次（概念目标）",
-          "by_when_zh": "品牌化阶段"
+          "by_when_zh": "品牌化阶段",
+          "baseline_zh": "概念阶段待基线调查核定（需正式运营/监测数据，非概算）",
+          "measurement_window_zh": "投入运营后首个完整年度起，按季度复测",
+          "stop_threshold_zh": "连续两个季度低于目标值 80% 即暂停并人工复核，不自动续期"
         }
       ],
       "dependency_zh": "公共空间许可",
