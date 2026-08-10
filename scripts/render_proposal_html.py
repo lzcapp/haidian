@@ -73,14 +73,65 @@ def render_markdown_body(submission_dir: Path, markdown: str) -> str:
             blocks.append("</ul>")
             in_list = False
 
-    for raw_line in markdown.splitlines():
+    raw_lines = markdown.splitlines()
+    n = len(raw_lines)
+    i = 0
+    table_separator_re = re.compile(r"^\s*\|\s*[\s:\-|]+\|\s*$")
+
+    def split_row(row: str) -> list[str]:
+        s2 = row.strip()
+        if s2.startswith("|"):
+            s2 = s2[1:]
+        if s2.endswith("|"):
+            s2 = s2[:-1]
+        return [c.strip() for c in s2.split("|")]
+
+    def render_table_rows(header_cells, body_rows) -> str:
+        parts = ['<table class="proposal-table">', "<thead><tr>"]
+        for c in header_cells:
+            parts.append(f"<th>{render_inline(c)}</th>")
+        parts.append("</tr></thead>")
+        if body_rows:
+            parts.append("<tbody>")
+            for row in body_rows:
+                parts.append("<tr>")
+                for c in row:
+                    parts.append(f"<td>{render_inline(c)}</td>")
+                parts.append("</tr>")
+            parts.append("</tbody>")
+        parts.append("</table>")
+        return "".join(parts)
+
+    while i < n:
+        raw_line = raw_lines[i]
         line = raw_line.rstrip()
-        if not line.strip():
+        stripped = line.lstrip()
+
+        if not stripped:
             flush_paragraph()
             close_list()
+            i += 1
             continue
 
-        image_match = IMAGE_RE.fullmatch(line.strip())
+        if stripped.startswith("|"):
+            j = i + 1
+            while j < n and not raw_lines[j].strip():
+                j += 1
+            if j < n and table_separator_re.match(raw_lines[j]):
+                end = i
+                while end < n and raw_lines[end].lstrip().startswith("|"):
+                    end += 1
+                rows = [raw_lines[k].strip() for k in range(i, end)]
+                if len(rows) >= 2:
+                    flush_paragraph()
+                    close_list()
+                    header_cells = split_row(rows[0])
+                    body_rows = [split_row(r) for r in rows[2:]]
+                    blocks.append(render_table_rows(header_cells, body_rows))
+                    i = end
+                    continue
+
+        image_match = IMAGE_RE.fullmatch(stripped)
         if image_match:
             flush_paragraph()
             close_list()
@@ -92,6 +143,7 @@ def render_markdown_body(submission_dir: Path, markdown: str) -> str:
                 f"<figcaption>{alt}</figcaption>"
                 "</figure>"
             )
+            i += 1
             continue
 
         if line.startswith("#"):
@@ -100,6 +152,7 @@ def render_markdown_body(submission_dir: Path, markdown: str) -> str:
             level = min(len(line) - len(line.lstrip("#")), 4)
             title = line[level:].strip()
             blocks.append(f"<h{level}>{render_inline(title)}</h{level}>")
+            i += 1
             continue
 
         if line.startswith("- "):
@@ -108,9 +161,11 @@ def render_markdown_body(submission_dir: Path, markdown: str) -> str:
                 blocks.append("<ul>")
                 in_list = True
             blocks.append(f"<li>{render_inline(line[2:].strip())}</li>")
+            i += 1
             continue
 
         paragraph.append(line.strip())
+        i += 1
 
     flush_paragraph()
     close_list()
@@ -221,6 +276,34 @@ code {{
   border-radius: 4px;
   padding: 0.03em 0.32em;
   font-size: 0.92em;
+}}
+
+.proposal-table {{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 18px 0 26px;
+  font-size: 15px;
+  line-height: 1.55;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #d7dee8;
+}}
+.proposal-table th,
+.proposal-table td {{
+  border: 1px solid #d7dee8;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}}
+.proposal-table th {{
+  background: #eef3f9;
+  color: #1d3556;
+  font-weight: 600;
+}}
+.proposal-table tbody tr:nth-child(even) td {{
+  background: #fafcfe;
+}}
+.proposal-table td code {{
+  font-size: 13px;
 }}
 @media (max-width: 720px) {{
   main {{ padding: 26px 16px 52px; }}
