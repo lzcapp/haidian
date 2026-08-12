@@ -18,7 +18,7 @@
       "path": "agent.json",
       "role": "config",
       "required": true,
-      "sha256": "95ab926676126dc311709671b54e28fb94886ae65e965b3f710aff7d3f2af1db",
+      "sha256": "371956b61d48ca9e9815afe8eda5a286d5a8d970258fa6c6f5b6ed70ef23540e",
       "size": 326
     },
     {
@@ -304,7 +304,7 @@
       "required": false,
       "language": "en",
       "translation_of": "proposal.md",
-      "sha256": "fe656bd26a83ad6629068b1dbd6fe6255f3d4a3842fef85347659c36f879b20e",
+      "sha256": "93fbe3610618ba3162d5a950bdb86fad6a85ef315ec728c89337d72ca5f633a5",
       "size": 73547
     },
     {
@@ -312,7 +312,7 @@
       "role": "narrative",
       "required": true,
       "language": "zh",
-      "sha256": "e9695f6a34f1814af23c95a4dbe08b799b75e2a301a1884106b3324bff65dfd6",
+      "sha256": "653829bb97056396af2ef2135c99695ac63ad861861db59b8206bc48db4db394",
       "size": 77011
     },
     {
@@ -349,7 +349,7 @@
       "path": "self_check.json",
       "role": "config",
       "required": true,
-      "sha256": "4d7500c87245683214bc26d0dba37c087697fe1b21352447b17b07acc0b54ece"
+      "sha256": "f25952885b0c359dac4419482964bdd185e7d0513000a33d495f6f77957dec32"
     },
     {
       "path": "sources.json",
