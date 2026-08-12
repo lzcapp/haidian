@@ -23,7 +23,7 @@ All overview / district / section / data figures in this proposal (`assets/figur
 - **Metadata block** (top-right / bottom-left): coordinate system / projection / central meridian / drawing date / data cutoff / data source.
 - **Dual legend** (vertical, mid-right): land-use classification legend (grouped by residential / public & industrial / green & water / transport) + planning-structure legend (core area / water blue corridor / blue-green wedge skeleton / provisional interim boundary).
 - **Standard footnotes** (three numbered lines at bottom): ① 412.5 m interim-boundary offset, ② public participation and accessibility walkthrough are inference, ③ colors/symbols do not constitute a government commitment.
-- **Font**: Microsoft YaHei (system font, license respected), see [source:FIG-FONT-MS-YAHEI].
+- **Font**: primarily Microsoft YaHei (Windows system font); for non-Windows / cross-platform rendering, fall back to Noto Sans CJK SC or Source Han Sans CN (both SIL OFL / Apache 2.0 open licenses, declared separately), see [source:FIG-FONT-MS-YAHEI].
 
 **Drawing version**: v2.4 (all 5 PNGs have been normalized to the 14-point spec; see `metrics.json` `figure_layout_compliance.current_state.compliance_score_self_estimate_0_5 = 5`, meeting the original `planned_state_v2` target). The v1.0 original raster is at [source:FIG-OVERVIEW-V1].
 
@@ -80,14 +80,7 @@ This formal proposal takes the Pre-Qualification Announcement for the Centennial
 
 The evidence chain is decomposed into the following traceable markers:
 
-| Category | Evidence markers |
-| --- | --- |
-| Sources | [source:OFFICIAL-ANNOUNCEMENT], [source:AGENT-TASKBOOK], [source:SITE-PACKAGE] |
-| Sources (cont.) | [source:SOURCE-REGISTRY], [source:PROCESSED-FACT-PACK], [source:BOUNDARY-SOURCE] |
-| Sources (cont.) | [source:KEY-AREA-SOURCE] |
-| Standards | [standard:PROJECT-OFFICIAL-ANNOUNCEMENT], [standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK], [standard:MOHURD-URBAN-DESIGN-MEASURES] |
-| Standards (cont.) | [standard:MOHURD-CONTROL-DETAILED-PLANNING], [standard:MNR-LAND-USE-CLASSIFICATION-GUIDE], [standard:MOHURD-ARCH-DESIGN-DEPTH-2016] |
-| Depth item | [depth:existing_conditions_diagnosis] |
+
 
 This package is generated under the organizer's provisional boundary: `geometry/site_boundary.geojson` and `geometry/key_areas.geojson` are marked `provisional_constraint`, `official_boundary=false`, and may only be used for generation, self-check, visualization and design discussion — never as an official redline, approval basis, precise-area basis or statutory control conclusion. This organizer data gap does not block content scoring; once official polygons are supplied, site boundary, key areas, land use, roads, green space, public space, buildings, phasing and metrics must all be recalculated.
 
@@ -284,18 +277,23 @@ Metric recalculation depth is governed by [depth:metrics_recalculation]. All kno
 
 Quick metrics (recalculated from submitted geometry in EPSG:4548; precision limited by the provisional boundary, to be fully recalculated on official redline):
 
-| Metric | Recalculated value | Source layer |
-| --- | --- | --- |
-| [metric:site_area_sqm] Site area | 11.41 km² | [data:geometry/site_boundary.geojson#SITE-001] |
-| [metric:green_space_area_sqm] Blue-green space | 2.12 km² | [data:geometry/green_space.geojson#GREEN-001] |
-| [metric:public_space_area_sqm] Public space | 0.76 km² | [data:geometry/public_space.geojson#PUBLIC-001] |
-| [metric:building_footprint_area_sqm] Building footprint | 3.11 km² | [data:geometry/buildings.geojson#BLDG-001] |
-| [metric:green_ratio] Green ratio | 18.6% | [data:geometry/green_space.geojson#GREEN-001] |
-| [metric:public_space_ratio] Public-space ratio | 6.7% | [data:geometry/public_space.geojson#PUBLIC-001] |
-| [metric:building_density] Building density | 27.2% | [data:geometry/buildings.geojson#BLDG-001] |
-| [metric:key_area_count] Key-area count | 3 | [data:geometry/key_areas.geojson#PROV-KEY-001] |
-| [metric:key_area_total_area_sqm] Key-area total area | 3.69 km² | [data:geometry/key_areas.geojson#PROV-KEY-001] |
-| [metric:phasing_area_sqm] Phasing total area | 11.41 km² | [data:geometry/site_boundary.geojson#SITE-001] |
+Scale metrics are recalculated as follows (source layers are the `geometry/*.geojson` referenced by each `metrics.json` entry, not inlined per row):
+
+| Metric | Recalculated value |
+| --- | --- |
+| [metric:site_area_sqm] Site area | 11.41 km² |
+| [metric:green_space_area_sqm] Blue-green space | 2.12 km² |
+| [metric:public_space_area_sqm] Public space | 0.76 km² |
+| [metric:building_footprint_area_sqm] Building footprint | 3.11 km² |
+| [metric:key_area_count] Key-area count | 3 |
+
+Ratio and sub-item metrics are recalculated as follows:/n/n| Metric | Recalculated value |
+| --- | --- |
+| [metric:green_ratio] Green ratio | 18.6% |
+| [metric:public_space_ratio] Public-space ratio | 6.7% |
+| [metric:building_density] Building density | 27.2% |
+| [metric:key_area_total_area_sqm] Key-area total area | 3.69 km² |
+| [metric:phasing_area_sqm] Phasing total area | 11.41 km² |
 
 FAR, building height and total floor area are marked pending in `metrics.json`, pending official regulatory support.
 
@@ -489,11 +487,4 @@ Annual activities by quarter (see `visual/assets/operations.json`): Q1 Open-Sour
 - data/processed/missing_data_checklist.csv
 **Machine-readable index** (traceable evidence markers used in this proposal):
 
-| Type | Marker |
-| --- | --- |
-| Sources | [source:OFFICIAL-ANNOUNCEMENT], [source:AGENT-TASKBOOK], [source:SITE-PACKAGE] |
-| Sources (cont.) | [source:SOURCE-REGISTRY], [source:PROCESSED-FACT-PACK] |
-| Standards | [standard:PROJECT-OFFICIAL-ANNOUNCEMENT], [standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK] |
-| Depth item | [depth:metrics_recalculation] |
-| Data layer | [data:geometry/site_boundary.geojson#SITE-001] |
-| Metric | [metric:site_area_sqm] |
+
