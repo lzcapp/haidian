@@ -203,7 +203,6 @@
         "核心指标"
       ],
       "source_ids": [
-        "MNR-LAND-USE-CLASSIFICATION-GUIDE",
         "SITE-PACKAGE"
       ],
       "assumption_ids": [
@@ -351,9 +350,7 @@
       "visual_sections": [
         "用地分区结构"
       ],
-      "source_ids": [
-        "MNR-LAND-USE-CLASSIFICATION-GUIDE"
-      ],
+      "source_ids": [],
       "assumption_ids": [
         "A-CONTROLS-001"
       ],
@@ -499,8 +496,7 @@
         "核心指标"
       ],
       "source_ids": [
-        "CULTURE",
-        "MOHURD-URBAN-DESIGN-MEASURES"
+        "CULTURE"
       ],
       "assumption_ids": [
         "A-CONTROLS-001"
