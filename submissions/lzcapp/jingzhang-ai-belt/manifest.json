@@ -190,8 +190,8 @@
       "path": "compliance_matrix.json",
       "role": "config",
       "required": true,
-      "sha256": "a9fcb50c78860e743c8426786038df9dd6be40ee2eb82bfc172d81f99a7f583d",
-      "size": 23543
+      "sha256": "6f8b91fbaaf698a0ccad529dcd02e32f69abd959b9be2d0212ec098aad3916cf",
+      "size": 23407
     },
     {
       "path": "design_depth_matrix.json",
