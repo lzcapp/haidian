@@ -23,11 +23,11 @@ All overview / district / section / data figures in this proposal (`assets/figur
 - **Metadata block** (top-right / bottom-left): coordinate system / projection / central meridian / drawing date / data cutoff / data source.
 - **Dual legend** (vertical, mid-right): land-use classification legend (grouped by residential / public & industrial / green & water / transport) + planning-structure legend (core area / water blue corridor / blue-green wedge skeleton / provisional interim boundary).
 - **Standard footnotes** (three numbered lines at bottom): ① 412.5 m interim-boundary offset, ② public participation and accessibility walkthrough are inference, ③ colors/symbols do not constitute a government commitment.
-- **Font**: primarily Microsoft YaHei (Windows system font); for non-Windows / cross-platform rendering, fall back to Noto Sans CJK SC or Source Han Sans CN (both SIL OFL / Apache 2.0 open licenses, declared separately), see [source:FIG-FONT-MS-YAHEI].
+- **Font**: body and annotation use **Noto Sans CJK SC (SIL OFL 1.1, open-source, commercially usable)** as the primary typeface; PingFang SC (macOS/iOS system font) and Microsoft YaHei (Windows system font) are only used as render fallbacks. Geometry concept drafts are exported with Noto Sans CJK SC embedded to ensure the package is commercially usable and reproducible for review and public display. Open-source font license: [source:FIG-FONT-NOTO-CJK].
 
 **Drawing version**: v2.4 (all 5 PNGs have been normalized to the 14-point spec; see `metrics.json` `figure_layout_compliance.current_state.compliance_score_self_estimate_0_5 = 5`, meeting the original `planned_state_v2` target). The v1.0 original raster is at [source:FIG-OVERVIEW-V1].
 
-**Figure-source / standard references**: [source:FIG-OVERVIEW-V1] (v1 original overview, [source:FIG-FONT-MS-YAHEI] font), [source:FIG-LAYOUT-SPEC]
+**Figure-source / standard references**: [source:FIG-OVERVIEW-V1] (v1 original overview, [source:FIG-FONT-NOTO-CJK] font), [source:FIG-LAYOUT-SPEC]
  (14-point renovation guide), [source:FIG-STD-CJJ97] (CJJ/T 97-2003 Urban Planning Cartographic Standards), [source:FIG-STD-GB50137] (GB 50137-2011 Land-Use Classification and Planning Construction-Land Standard).
 
 Honest statement: this figure specification is a methodological suggestion, not an approved conclusion; formal cartography must be reviewed by a unit holding urban-rural planning qualification (Grade B or above). This proposal does not claim to hold such qualification.
