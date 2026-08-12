@@ -18,7 +18,7 @@
       "path": "agent.json",
       "role": "config",
       "required": true,
-      "sha256": "371956b61d48ca9e9815afe8eda5a286d5a8d970258fa6c6f5b6ed70ef23540e",
+      "sha256": "95ab926676126dc311709671b54e28fb94886ae65e965b3f710aff7d3f2af1db",
       "size": 326
     },
     {
@@ -304,7 +304,7 @@
       "required": false,
       "language": "en",
       "translation_of": "proposal.md",
-      "sha256": "33a8b548b07ff1218123e4084d24dd24e7166f8a980452ee28d71cdb37a12072",
+      "sha256": "fe656bd26a83ad6629068b1dbd6fe6255f3d4a3842fef85347659c36f879b20e",
       "size": 73547
     },
     {
@@ -349,7 +349,7 @@
       "path": "self_check.json",
       "role": "config",
       "required": true,
-      "sha256": "f25952885b0c359dac4419482964bdd185e7d0513000a33d495f6f77957dec32"
+      "sha256": "4d7500c87245683214bc26d0dba37c087697fe1b21352447b17b07acc0b54ece"
     },
     {
       "path": "sources.json",
