@@ -240,6 +240,46 @@
       "usable_for": "作为用地色与分类的规范参照。",
       "not_usable_for": "作为本方案已通过该标准审定的声明。",
       "registry_type": "national_standard"
+    },
+    {
+      "id": "BJ-OLD-RENO-COST-INDEX",
+      "source_type": "official_public",
+      "authority_level": "A0",
+      "usable_for": "Unit-cost benchmarks for Beijing old-residential-district comprehensive renovation (trail, road, parking, heating external line).",
+      "not_usable_for": "As exact cost for this site; city-level indices, not a project-specific estimate.",
+      "usage": "Calibrates the personnel/space/equipment accounts of the Cost Five-Accounts (concept stage).",
+      "registry_type": "official_announcement",
+      "url": "https://zjw.beijing.gov.cn/bjjs/resource/cms/article/10872599/543533687/%E5%8C%97%E4%BA%AC%E5%B8%82%E8%80%81%E6%97%A7%E5%B0%8F%E5%8C%BA%E7%BB%BC%E5%90%88%E6%94%B9%E9%80%A0%E5%B7%A5%E7%A8%8B%E9%80%A0%E4%BB%B7%E6%8C%87%E6%95%B0%EF%BC%88%E7%AC%AC%E5%8D%81%E4%BA%94%E6%9C%9F%EF%BC%89.pdf"
+    },
+    {
+      "id": "BJ-RENO-PROJECT-EX",
+      "source_type": "official_public",
+      "authority_level": "A0",
+      "usable_for": "Public Beijing old-residential-district renovation project costs (Haidian Balizhuang 196,000 m2 / 180 M CNY; Mentougou Dayu 270,000 m2 / 205 M CNY).",
+      "not_usable_for": "As exact cost for this site; project-specific, not a unit-cost rule.",
+      "usage": "Cross-checks the ~750-920 CNY/m2 comprehensive-renovation unit-cost band used in the Cost Five-Accounts.",
+      "registry_type": "official_announcement",
+      "url": "https://ggzyfw.beijing.gov.cn/jyxxgcjszbjh/20241219/4795386.html"
+    },
+    {
+      "id": "BJ-URBAN-RENEWAL-INVEST",
+      "source_type": "official_public",
+      "authority_level": "A0",
+      "usable_for": "Beijing 2023 urban-renewal fixed-asset investment (~44.0 B CNY, 153 municipal demos) and Fengtai 2024 (82 projects, ~10.45 B CNY).",
+      "not_usable_for": "As a per-project budget; district aggregates, not a site-specific figure.",
+      "usage": "Calibrates district-renewal investment-intensity framing in the Cost Five-Accounts.",
+      "registry_type": "official_announcement",
+      "url": "https://invest.beijing.gov.cn/zwgk/sqgzdt/202412/t20241217_3968059.html"
+    },
+    {
+      "id": "GREENWAY-TIANTAI",
+      "source_type": "official_public",
+      "authority_level": "A1",
+      "usable_for": "Tiantai Shi-feng-xi waterfront greenway bid: 3.6 km, 21.95 M CNY (trail, greening, nodes, lighting, pavilions).",
+      "not_usable_for": "As a Beijing-specific unit cost; Zhejiang case, used as an order-of-magnitude analogy only.",
+      "usage": "Calibrates the waterfront/greenway construction cost band (5,000-8,000 CNY/m) in the Cost Five-Accounts.",
+      "registry_type": "official_announcement",
+      "url": "https://ggzy.zj.gov.cn/jyxxgk/002001/002001005/20251115/e4f6ce14-6068-46dc-b95b-77718adc48b4.html"
     }
   ]
 }
