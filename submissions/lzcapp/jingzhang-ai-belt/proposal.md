@@ -23,7 +23,7 @@ bilingual_contract_version: "1"
 - **元数据块**（右上/左下）：坐标系 / 投影 / 中央子午线 / 成图日期 / 资料截止 / 资料来源。
 - **双图例**（右中竖排）：用地分类图例（按居住/公共产业/绿地水系/交通四大类分组）+ 规划结构图例（核心区/水系蓝廊/蓝绿楔骨架/provisional 临时边界）。
 - **规范脚注**（底部三行编号脚注）：① 412.5 m 临时边界偏移、② 公共参与与无障碍走查为推演、③ 配色符号不表政府承诺。
-- **字体**：Microsoft YaHei（系统字体，遵守其许可），见 [source:FIG-FONT-MS-YAHEI]。
+- **字体**：以 Microsoft YaHei（Windows 系统字体）为主；非 Windows / 跨平台渲染回退 Noto Sans CJK SC、Source Han Sans CN（均 SIL OFL / Apache 2.0 开源许可，须分别声明），见 [source:FIG-FONT-MS-YAHEI]。
 
 **成图版本**：v2.4（5 张 PNG 已全部按 14 条规范改造完成；详见 `metrics.json` 的 `figure_layout_compliance.current_state.compliance_score_self_estimate_0_5 = 5`，对应原 `planned_state_v2` 目标已达成）。v1.0 原版位图见 [source:FIG-OVERVIEW-V1]。
 
@@ -381,18 +381,25 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 
 指标速览（均由提交几何在 EPSG:4548 投影面直接复算；精度受 provisional boundary 限制，待官方 redline 发布后整体重算）：
 
-| 指标 | 复算值 | 来源图层 |
-| --- | --- | --- |
-| [metric:site_area_sqm] 用地面积 | 1141.3 万㎡ | [data:geometry/site_boundary.geojson#SITE-001] |
-| [metric:green_space_area_sqm] 蓝绿空间面积 | 211.9 万㎡ | [data:geometry/green_space.geojson#GREEN-001] |
-| [metric:public_space_area_sqm] 公共空间面积 | 76.2 万㎡ | [data:geometry/public_space.geojson#PUBLIC-001] |
-| [metric:building_footprint_area_sqm] 建筑基底面积 | 310.6 万㎡ | [data:geometry/buildings.geojson#BLDG-001] |
-| [metric:green_ratio] 绿地率 | 18.6% | [data:geometry/green_space.geojson#GREEN-001] |
-| [metric:public_space_ratio] 公共空间占比 | 6.7% | [data:geometry/public_space.geojson#PUBLIC-001] |
-| [metric:building_density] 建筑密度 | 27.2% | [data:geometry/buildings.geojson#BLDG-001] |
-| [metric:key_area_count] 重点区域数量 | 3 处 | [data:geometry/key_areas.geojson#PROV-KEY-001] |
-| [metric:key_area_total_area_sqm] 重点区域总面积 | 369.3 万㎡ | [data:geometry/key_areas.geojson#PROV-KEY-001] |
-| [metric:phasing_area_sqm] 分期总面积 | 1141.3 万㎡ | [data:geometry/site_boundary.geojson#SITE-001] |
+规模类指标复算如下（来源图层见各 `metrics.json` 条目对应的 `geometry/*.geojson`，不再逐行内联）：
+
+| 指标 | 复算值 |
+| --- | --- |
+| [metric:site_area_sqm] 用地面积 | 1141.3 万㎡ |
+| [metric:green_space_area_sqm] 蓝绿空间面积 | 211.9 万㎡ |
+| [metric:public_space_area_sqm] 公共空间面积 | 76.2 万㎡ |
+| [metric:building_footprint_area_sqm] 建筑基底面积 | 310.6 万㎡ |
+| [metric:key_area_count] 重点区域数量 | 3 处 |
+
+比例与分项类指标复算如下：
+
+| 指标 | 复算值 |
+| --- | --- |
+| [metric:green_ratio] 绿地率 | 18.6% |
+| [metric:public_space_ratio] 公共空间占比 | 6.7% |
+| [metric:building_density] 建筑密度 | 27.2% |
+| [metric:key_area_total_area_sqm] 重点区域总面积 | 369.3 万㎡ |
+| [metric:phasing_area_sqm] 分期总面积 | 1141.3 万㎡ |
 
 上述空间指标可由 GeoJSON 直接复算，属于“可由提交几何复算”的第一类指标；容积率、建筑高度、总建筑面积在 `metrics.json` 中列为待核定，待官方控规与任务书附件支撑。
 
@@ -565,11 +572,4 @@ agent 生成的AI治理建议必须遵守数据最小化、公开来源、可解
 - data/processed/missing_data_checklist.csv
 - 机器可读引用索引（正文各节已逐项给出，以下为按类型汇总）：
 
-| 类型 | 引用标识 |
-| --- | --- |
-| 来源 | [source:OFFICIAL-ANNOUNCEMENT]、[source:AGENT-TASKBOOK]、[source:SITE-PACKAGE] |
-| 来源（续） | [source:SOURCE-REGISTRY]、[source:PROCESSED-FACT-PACK] |
-| 标准 | [standard:PROJECT-OFFICIAL-ANNOUNCEMENT]、[standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK] |
-| 深度项 | [depth:metrics_recalculation] |
-| 数据 | [data:geometry/site_boundary.geojson#SITE-001] |
-| 指标 | [metric:site_area_sqm] |
+
