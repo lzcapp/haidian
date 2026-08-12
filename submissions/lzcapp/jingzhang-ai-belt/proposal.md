@@ -23,7 +23,7 @@ bilingual_contract_version: "1"
 - **元数据块**（右上/左下）：坐标系 / 投影 / 中央子午线 / 成图日期 / 资料截止 / 资料来源。
 - **双图例**（右中竖排）：用地分类图例（按居住/公共产业/绿地水系/交通四大类分组）+ 规划结构图例（核心区/水系蓝廊/蓝绿楔骨架/provisional 临时边界）。
 - **规范脚注**（底部三行编号脚注）：① 412.5 m 临时边界偏移、② 公共参与与无障碍走查为推演、③ 配色符号不表政府承诺。
-- **字体**：以 Microsoft YaHei（Windows 系统字体）为主；非 Windows / 跨平台渲染回退 Noto Sans CJK SC、Source Han Sans CN（均 SIL OFL / Apache 2.0 开源许可，须分别声明），见 [source:FIG-FONT-MS-YAHEI]。
+- **字体**：正文与标注主字体采用 **Noto Sans CJK SC（SIL OFL 1.1，开源、可商用）**；系统环境与浏览器渲染时回落到 PingFang SC（macOS/iOS 系统字体）、Microsoft YaHei（Windows 系统字体）作兜底，最终几何概念稿导出时统一嵌入 Noto Sans CJK SC，确保评审与公开展示均可商用、可复现。开源字体授权见 [source:FIG-FONT-NOTO-CJK]。
 
 **成图版本**：v2.4（5 张 PNG 已全部按 14 条规范改造完成；详见 `metrics.json` 的 `figure_layout_compliance.current_state.compliance_score_self_estimate_0_5 = 5`，对应原 `planned_state_v2` 目标已达成）。v1.0 原版位图见 [source:FIG-OVERVIEW-V1]。
 
@@ -31,7 +31,7 @@ bilingual_contract_version: "1"
 
 **图源/规范引用**：
 - [source:FIG-OVERVIEW-V1]：v1 原版总览图；
-- [source:FIG-FONT-MS-YAHEI]：字体授权；
+- [source:FIG-FONT-NOTO-CJK]：正文/标注主字体授权（Noto Sans CJK SC，SIL OFL 1.1，开源可商用）；系统字体 PingFang SC / Microsoft YaHei 仅作渲染兜底，不作设计主字体。
 - [source:FIG-LAYOUT-SPEC]：14 条改造指南；
 - [source:FIG-STD-CJJ97]：CJJ/T 97-2003 城市规划制图标准；
 - [source:FIG-STD-GB50137]：GB 50137-2011 城市用地分类与规划建设用地标准。
