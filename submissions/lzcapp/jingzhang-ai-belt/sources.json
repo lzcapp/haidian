@@ -212,14 +212,14 @@
       "registry_type": "layout_specification"
     },
     {
-      "id": "FIG-FONT-MS-YAHEI",
+      "id": "FIG-FONT-NOTO-CJK",
       "source_type": "font_reference",
-      "authority_level": "system_font",
-      "path": "C:/Windows/Fonts/msyh.ttc",
-      "usage": "本方案中文标注/标题/脚注的字体来源,Microsoft YaHei 微软雅黑系统字体(Windows 自带)。",
-      "usable_for": "在中文 Windows 环境渲染图面文字。",
-      "not_usable_for": "在非 Windows 环境的开源/跨平台场景直接依赖;非 Windows 环境需 fallback 到 Noto Sans CJK SC 或 Source Han Sans CN(均另属 SIL OFL/Apache 2.0 等开源许可,需分别声明)。",
-      "registry_type": "system_font"
+      "authority_level": "open_source",
+      "path": "https://github.com/notofonts/noto-cjk",
+      "usage": "本方案正文与标注的设计主字体:Noto Sans CJK SC(SIL Open Font License 1.1,开源、可商用、可再分发)。全平台一致,评审与公开展示均可直接使用。",
+      "usable_for": "作为中英文正文、标题、标注、图面文字与几何概念稿导出的主字体;离线展示与对外发布均无需额外授权。",
+      "not_usable_for": "作为'微软雅黑/系统字体'的替代声明:系统字体(PingFang SC、Microsoft YaHei)仅作浏览器/系统渲染兜底,本方案不将其作为设计主字体,以避免专有字体商用授权争议。",
+      "registry_type": "open_source_font"
     },
     {
       "id": "FIG-STD-CJJ97",
